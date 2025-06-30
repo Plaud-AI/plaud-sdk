@@ -11,7 +11,7 @@ This is the home of PLAUD SDK. Use this SDK to add PLAUD's AI-powered hardware a
 
 ## Integrate the SDK
 
-See the[`sdk-integration-guide`](https://github.com/Plaud-AI/plaud-sdk/blob/main/docs/sdk-integration-guide.md)
+See the [`sdk-integration-guide`](https://github.com/Plaud-AI/plaud-sdk/blob/main/docs/sdk-integration-guide.md)
 
 ## Features
 
