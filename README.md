@@ -56,7 +56,7 @@ See the [`sdk-integration-guide`](https://github.com/Plaud-AI/plaud-sdk/blob/mai
 ## FAQ
 
 ### How to get a PLAUD device ?
-​Plaud devices are available for purchase through their official website (https://www.plaud.ai/) or popular online marketplaces
+​Plaud devices are available for purchase through their official website (https://www.plaud.ai/) or other popular online marketplaces
 
   
 ### How to begin testing of PLUAD device with my system
