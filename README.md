@@ -6,7 +6,7 @@ This is the home of PLAUD SDK. Use this SDK to add PLAUD's AI-powered hardware a
 - Monitor the settings and status of the devices
 - Controll the working of the device such as start、stop etc
 - Changing the configuration of the devices ​to meet your needs
-- Retrieving the recording produced by the device After obtaining ​authorization
+- Retrieving the recording produced by the device after obtaining ​authorization
 - Integration with your workflow by connecting to PLAUD Cloud or a self-hosted service
 
 
@@ -25,10 +25,31 @@ PLAUD SDK is designed to work across all platforms. ​Support for Android and i
 
 See the [`sdk-integration-guide`](https://github.com/Plaud-AI/plaud-sdk/blob/main/docs/sdk-integration-guide.md)
 
-## Features
+## Core Features
 
 - [x] scan and discover nearby devices
-- [ ] bind and connect to the target device
+- [x] bind and connect to the target device
+- [x] get the status of the device
+- [x] get the storage capacity of the device 
+- [x] get the power status of the device
+- [x] start/pause/resume/stop the recording
+- [x] get the recording item list
+- [x] begin/stop download the specific recording item
+- [x] delete the specific recording item
+- [x] delete all the recording items
+- [x] device wifi configuration 
+    - add wifi
+    - delete wifi
+    - update wifi
+    - get the wifi list
+    - set the upload address
+- [x] Cloud Processing Service
+    - AI-powered Transcription & Summarization
+    - Supports custom preferences and processing templates
+
+
+
+
 
 ## FAQ
 
