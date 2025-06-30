@@ -9,6 +9,14 @@ This is the official hub for the PLAUD SDK. Use this SDK to integrate PLAUD's AI
 - Retrieving recordings produced by devices after obtaining authorization
 - Integrating with your workflow via PLAUD Cloud or self-hosted services
 
+## System Architecture   
+
+*   PLAUD SDK: A software development kit enabling third-party applications to integrate with PLAUD's Al-powered hardware and software services
+*   Client Host App: The client's mobile app that integrates the PLAUD SDK to access PLAUD's hardware and software services
+*   PLAUD Template App: A pre-built template App provided by PLAUD, enabling enterprises to rapidly customize and deploy private-branded solutions via APIs and Apps
+
+  ![Architecture](/assets/outline.png "")  
+  
 ## Supported Platforms
 
 PLAUD SDK is designed to work across all platforms. ​Support for Android and iOS is now available, and additional platforms are currently under development.
@@ -32,7 +40,7 @@ See the [SDK Integration Guide](https://github.com/Plaud-AI/plaud-sdk/blob/main/
 - [x] Monitor device power status
 - [x] Start/pause/resume/stop recordings
 - [x] Access recording item lists
-- [x] Initiate/cancel recording downloads
+- [x] Start/cancel recording downloads
 - [x] Delete specific recordings
 - [x] Clear all recording items
 - [x] Configure device Wi-Fi Sync:

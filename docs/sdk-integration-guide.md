@@ -1,16 +1,6 @@
 ## Introduction
 This document provides guidance for integrating and using of the PLAUD SDK.
 
-
-
-## System Architecture   
-
-*   PLAUD SDK: A software development kit enabling third-party applications to integrate with PLAUD's Al-powered hardware and software services
-*   Client Host App: The client's mobile app that integrates the PLAUD SDK to access PLAUD's hardware and software services
-*   PLAUD Template App: A pre-built template App provided by PLAUD, enabling enterprises to rapidly customize and deploy private-branded solutions via APIs and Apps
-
-  ![Architecture](/assets/outline.png "")
-
 ## Function Overview
 
     - PLAUD SDK
