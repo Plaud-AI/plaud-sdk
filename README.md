@@ -12,8 +12,8 @@ This is the official hub for the PLAUD SDK. Use this SDK to integrate PLAUD's AI
 ## System Architecture   
 
 *   PLAUD SDK: A software development kit enabling third-party applications to integrate with PLAUD's Al-powered hardware and software services
-*   Client Host App: The client's mobile app that integrates the PLAUD SDK to access PLAUD's hardware and software services
-*   PLAUD Template App: A pre-built template App provided by PLAUD, enabling enterprises to rapidly customize and deploy private-branded solutions via APIs and Apps
+*   Client Host App: The client's app that integrates the PLAUD SDK to access PLAUD's hardware and software services
+*   PLAUD Template App: A pre-built template app provided by PLAUD, enabling enterprises to rapidly customize and deploy private-branded solutions via APIs and Apps
 
 <p align="center">
   <img  src="/assets/outline.png">
@@ -41,7 +41,7 @@ See the [SDK Integration Guide](https://github.com/Plaud-AI/plaud-sdk/blob/main/
 - [x] Check device storage capacity
 - [x] Monitor device power status
 - [x] Start/pause/resume/stop recordings
-- [x] Access recording item lists
+- [x] Get recording item lists
 - [x] Start/cancel recording downloads
 - [x] Delete specific recordings
 - [x] Clear all recording items
@@ -58,12 +58,10 @@ See the [SDK Integration Guide](https://github.com/Plaud-AI/plaud-sdk/blob/main/
 ## FAQ
 
 ### How to get a PLAUD device?
-PLAUD devices are available for purchase through our [official website](https://www.plaud.ai/) or authorized online retailers.
+PLAUD devices are available for purchase through our [official website](https://www.plaud.ai/) or other authorized online retailers.
 
 ### How to test PLAUD devices with my system?
-An appKey is required for secure device connection and access. If you don't have one, contact support@plaud.ai to request a test key. 
-
-To begin testing:
+An appKey is required for secure device connection and access. If you don't have one, contact support@plaud.ai to request a test key. Then you can begin testing:
 1. Build and run the Demo app in the `examples` folder
 2. Enter your appKey 
 3. Scan for and connect to your device
