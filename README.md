@@ -9,6 +9,18 @@ This is the home of PLAUD SDK. Use this SDK to add PLAUD's AI-powered hardware a
 - Retrieving the recording produced by the device After obtaining ​authorization
 - Integration with your workflow by connecting to PLAUD Cloud or a self-hosted service
 
+
+## Supported platforms
+
+PLAUD SDK is designed to work across all platforms. ​Support for Android and iOS is now available, and additional platforms are currently in development.
+
+- [x] Android
+- [x] iOS
+- [ ] Web
+- [ ] macOS
+- [ ] Windows
+- [ ] Linux
+
 ## Integrate the SDK
 
 See the [`sdk-integration-guide`](https://github.com/Plaud-AI/plaud-sdk/blob/main/docs/sdk-integration-guide.md)
