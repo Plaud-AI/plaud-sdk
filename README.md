@@ -16,7 +16,7 @@ This is the official hub for the PLAUD SDK. Use this SDK to integrate PLAUD's AI
 *   PLAUD Template App: A pre-built template App provided by PLAUD, enabling enterprises to rapidly customize and deploy private-branded solutions via APIs and Apps
 
 <div style="text-align: center;">
-    <img width="100%" src="/assets/outline.png?center">
+    <img width="70%" src="/assets/outline.png?center">
 </div>
 
 ## Supported Platforms
