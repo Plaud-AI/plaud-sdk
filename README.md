@@ -51,9 +51,17 @@ See the [`sdk-integration-guide`](https://github.com/Plaud-AI/plaud-sdk/blob/mai
     - Supports custom preferences and processing templates
  
  
- 
+
 
 ## FAQ
 
-### 
+### How to get a PLAUD device ?
+​Plaud devices are available for purchase through their official website (https://www.plaud.ai/) or popular online marketplaces
 
+  
+### How to begin testing of PLUAD device with my system
+An appKey is used to ensure PLAUD devices are securely connected and accessed. If you don't have one yet, please contact support@plaud.ai to apply for a test key. Then just build and run the Demo app under the example folder and enter the key before scan and connect the device.
+
+
+## Try Playground App
+coming soon
