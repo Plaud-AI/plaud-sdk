@@ -29,10 +29,6 @@ PLAUD SDK is designed to work across all platforms. ​Support for Android and i
 - [ ] macOS
 - [ ] Windows
 
-## Integrate the SDK
-
-See the [SDK Integration Guide](https://github.com/Plaud-AI/plaud-sdk/blob/main/docs/sdk-integration-guide.md)
-
 ## Core Features
 
 - [x] Scan and discover nearby devices
@@ -54,6 +50,11 @@ See the [SDK Integration Guide](https://github.com/Plaud-AI/plaud-sdk/blob/main/
 - [x] Cloud Processing Service:
     - AI-powered transcription & summarization
     - Customizable processing preferences and templates
+
+## Integrate the SDK
+
+See the [SDK Integration Guide](https://github.com/Plaud-AI/plaud-sdk/blob/main/docs/sdk-integration-guide.md)
+
 
 ## FAQ
 
