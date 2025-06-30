@@ -1,11 +1,5 @@
----
-title: Client SDK Integration Guide
-description: "This document provides guidance for integrating and using of the PLAUD SDK
-"
----
-
 ## Introduction
-In general, your client App can connect to PLAUD devices via the PLAUD SDK to view device status and information, configure the device settings, control recording operations (start, pause, resume, and stop), and retrieve recordings. Additionally, you can also utilize PLAUD's cloud-based services such as audio transcription and summarization, which can be integration with your workflow. All above operations are executed in compliance with strict enterprise-grade security standards.
+This document provides guidance for integrating and using of the PLAUD SDK.
 
 
 
@@ -718,5 +712,3 @@ The connection status will be returned in the following callback:
       *   Android: `plaud-sdk.aar`
       *   iOS: `PenBleSDK.framework`, `PlaudDeviceBasicSDK.framework` 
       *   DemoApp: SDK Demo  
--  Related Download Link
-      *   Coming soon
