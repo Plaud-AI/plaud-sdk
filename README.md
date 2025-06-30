@@ -15,9 +15,7 @@ This is the official hub for the PLAUD SDK. Use this SDK to integrate PLAUD's AI
 *   Client Host App: The client's mobile app that integrates the PLAUD SDK to access PLAUD's hardware and software services
 *   PLAUD Template App: A pre-built template App provided by PLAUD, enabling enterprises to rapidly customize and deploy private-branded solutions via APIs and Apps
 
-<div style="text-align: center;">
-    <img width="70%" src="/assets/outline.png?center">
-</div>
+<center><img src='/assets/outline.png'></center>
 
 ## Supported Platforms
 
