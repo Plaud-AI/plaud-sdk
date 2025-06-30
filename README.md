@@ -20,10 +20,13 @@ PLAUD SDK is designed to work across all platforms. ​Support for Android and i
 - [ ] macOS
 - [ ] Windows
 - [ ] Linux
+ 
+
 
 ## Integrate the SDK
 
 See the [`sdk-integration-guide`](https://github.com/Plaud-AI/plaud-sdk/blob/main/docs/sdk-integration-guide.md)
+ 
 
 ## Core Features
 
@@ -37,7 +40,7 @@ See the [`sdk-integration-guide`](https://github.com/Plaud-AI/plaud-sdk/blob/mai
 - [x] begin/stop download the specific recording item
 - [x] delete the specific recording item
 - [x] delete all the recording items
-- [x] device wifi configuration 
+- [x] device Wifi-Sync configuration 
     - add wifi
     - delete wifi
     - update wifi
@@ -46,10 +49,9 @@ See the [`sdk-integration-guide`](https://github.com/Plaud-AI/plaud-sdk/blob/mai
 - [x] Cloud Processing Service
     - AI-powered Transcription & Summarization
     - Supports custom preferences and processing templates
-
-
-
-
+ 
+ 
+ 
 
 ## FAQ
 
