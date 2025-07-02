@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Minimalist color palette -->
+
+    <!-- Brand/Accent color (iOS Blue) -->
+    <color name="accent">#007AFF</color>
+    <color name="accent_ripple">#33007AFF</color>
+
+    <!-- Text colors -->
+    <color name="text_primary">#000000</color> <!-- Primary text, black -->
+    <color name="text_secondary">#8A8A8E</color> <!-- Secondary text, gray -->
+    <color name="text_hint">#C7C7CD</color> <!-- Placeholder text, lighter gray -->
+
+    <!-- Background colors -->
+    <color name="background">#FFFFFF</color> <!-- Main page background, white -->
+    <color name="background_secondary">#F2F2F7</color> <!-- List grouping or card background, light gray -->
+
+    <!-- Other colors -->
+    <color name="border">#D1D1D6</color> <!-- Divider color -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Functional colors (optional, if needed) -->
+    <color name="error">#FF3B30</color> <!-- Error/Warning color (iOS Red) -->
+    <color name="success">#34C759</color> <!-- Success color (iOS Green) -->
+
+    <color name="system_blue">#007AFF</color>
+    <color name="system_red">#FF3B30</color>
+    <color name="system_red_ripple">#33FF3B30</color>
+    <color name="divider">#E5E5EA</color>
+
+</resources> 
