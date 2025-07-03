@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Plaud</string>
+    <string name="app_name">Plaud SDK Showcase</string>
     <string name="fragment_intro_title">SDK Feature Demo</string>
     <string name="fragment_intro_start_scan_button">Start Scan</string>
     <string name="loading_toast_connecting">Connecting...</string>
@@ -248,4 +248,10 @@
     <string name="dialog_btn_set">Set</string>
     <string name="dialog_btn_cancel">Cancel</string>
     <string name="toast_app_key_set_success">App Key set successfully</string>
+
+    <!-- Privacy Policy -->
+    <string name="privacy_policy_title">Privacy Policy</string>
+    <string name="privacy_policy_url">https://app.plaud.ai/privacy</string>
+    <string name="settings_title">Settings</string>
+    <string name="about_title">About</string>
 </resources>

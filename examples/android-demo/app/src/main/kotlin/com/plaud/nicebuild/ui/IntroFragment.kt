@@ -2,7 +2,13 @@ package com.plaud.nicebuild.ui
 
 import android.Manifest
 import android.app.AlertDialog
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
+import android.webkit.WebView
+import android.webkit.WebViewClient
+import android.widget.ImageButton
+import android.widget.ProgressBar
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -127,6 +133,12 @@ class IntroFragment : Fragment() {
         // Set up long press on title for language selection
         val tvTitle = view.findViewById<TextView>(R.id.tv_title)
         setupLongPressLanguageSelection(tvTitle)
+
+        // Set up privacy policy link
+        val tvPrivacyPolicy = view.findViewById<TextView>(R.id.tv_privacy_policy)
+        tvPrivacyPolicy.setOnClickListener {
+            openPrivacyPolicy()
+        }
 
         return view
     }
@@ -253,6 +265,101 @@ class IntroFragment : Fragment() {
         }
 
         showOptionSelectionDialog(options, currentLangName)
+    }
+
+    private fun openPrivacyPolicy() {
+        showPrivacyPolicyDialog()
+    }
+
+    private fun showPrivacyPolicyDialog() {
+        val dialog = Dialog(requireContext())
+        dialog.setContentView(R.layout.dialog_privacy_policy)
+        
+        // Set dialog to full screen with iOS-style presentation
+        dialog.window?.setLayout(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.MATCH_PARENT
+        )
+        
+        // Remove default dialog styling for clean iOS look
+        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        
+        val webView = dialog.findViewById<WebView>(R.id.webview_privacy_policy)
+        val loadingContainer = dialog.findViewById<LinearLayout>(R.id.loading_container)
+        val btnClose = dialog.findViewById<TextView>(R.id.btn_close)
+        
+        // Setup WebView with iOS-style behavior
+        webView.webViewClient = object : WebViewClient() {
+            override fun onPageStarted(view: WebView?, url: String?, favicon: android.graphics.Bitmap?) {
+                super.onPageStarted(view, url, favicon)
+                loadingContainer.visibility = View.VISIBLE
+            }
+            
+            override fun onPageFinished(view: WebView?, url: String?) {
+                super.onPageFinished(view, url)
+                loadingContainer.visibility = View.GONE
+            }
+            
+            override fun onReceivedError(
+                view: WebView?,
+                errorCode: Int,
+                description: String?,
+                failingUrl: String?
+            ) {
+                super.onReceivedError(view, errorCode, description, failingUrl)
+                loadingContainer.visibility = View.GONE
+                
+                // Show iOS-style error message
+                Toast.makeText(
+                    requireContext(),
+                    "Unable to load content",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
+        
+        // Configure WebView settings for optimal iOS-like experience
+        webView.settings.apply {
+            javaScriptEnabled = true
+            domStorageEnabled = true
+            loadWithOverviewMode = true
+            useWideViewPort = true
+            builtInZoomControls = false
+            displayZoomControls = false
+            
+            // iOS-like text rendering
+            textZoom = 100
+            minimumFontSize = 12
+            
+            // Smooth scrolling
+            setSupportZoom(false)
+        }
+        
+        // Load privacy policy URL
+        val privacyPolicyUrl = getString(R.string.privacy_policy_url)
+        webView.loadUrl(privacyPolicyUrl)
+        
+        // Setup close button with iOS-style interaction
+        btnClose.setOnClickListener {
+            dialog.dismiss()
+        }
+        
+        // Handle back button in dialog
+        dialog.setOnKeyListener { _, keyCode, event ->
+            if (keyCode == android.view.KeyEvent.KEYCODE_BACK && event.action == android.view.KeyEvent.ACTION_UP) {
+                if (webView.canGoBack()) {
+                    webView.goBack()
+                    true
+                } else {
+                    dialog.dismiss()
+                    true
+                }
+            } else {
+                false
+            }
+        }
+        
+        dialog.show()
     }
 
     private fun showOptionSelectionDialog(options: Map<String, () -> Unit>, currentSelection: String?) {
