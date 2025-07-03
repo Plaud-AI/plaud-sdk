@@ -1,0 +1,349 @@
+/* Common */
+"common.ok" = "好的";
+"common.cancel" = "取消";
+"common.confirm" = "确认";
+"common.back" = "返回";
+"common.done" = "完成";
+"common.error" = "错误";
+"common.warning" = "警告";
+"common.success" = "成功";
+"common.refresh" = "刷新";
+"common.connect" = "连接";
+
+/* Login & Auth */
+"auth.appkey.title" = "请输入AppKey和AppSecret";
+"auth.appkey.placeholder" = "AppKey";
+"auth.appsecret.placeholder" = "AppSecret";
+"auth.input.empty" = "请输入AppKey和AppSecret";
+"auth.email.support" = "AppKey和AppSecret用于确保PLAUD设备被安全地连接和访问，如果您目前没有它们，请联系%@申请用于测试的Key";
+
+/* Progress */
+"progress.loading" = "加载中...";
+"progress.connecting" = "连接中...";
+"progress.downloading" = "下载中...";
+"progress.uploading" = "上传中...";
+"progress.processing" = "处理中...";
+
+/* Progress Alert */
+"progress.alert.cancel" = "取消";
+"progress.alert.confirm" = "确定";
+"progress.alert.progress_format" = "%@，进度%d%%";
+"progress.alert.progress_only" = "%d%%";
+"progress.alert.view" = "去查看";
+"progress.alert.upload" = "去上传";
+
+/* File Manager */
+"file.manager.error.file_exists" = "文件已存在";
+"file.manager.error.save_failed" = "保存文件失败：%@";
+"file.manager.status.transcode_success" = "转码成功";
+"file.manager.status.transcode_failed" = "转码失败";
+"file.downloaded.title" = "已下载录音";
+"file.uploaded.status" = "已上传";
+
+/* Bluetooth */
+"ble.scan.title" = "扫描设备";
+"ble.scan.start" = "开始扫描";
+"ble.scan.stop" = "停止扫描";
+"ble.status.connected" = "已连接";
+"ble.status.disconnected" = "已断开";
+"ble.error.connection" = "连接失败";
+"ble.error.timeout" = "连接超时";
+"ble.status.authorized" = "已授权";
+"ble.status.powered_off" = "蓝牙已关闭";
+"ble.status.unauthorized" = "未授权权限";
+"ble.status.unsupported" = "设备不支持蓝牙";
+"ble.status.resetting" = "蓝牙重置中";
+"ble.status.unknown" = "状态未知";
+"ble.device.signal_strength" = "信号强度: %ld dBm";
+"ble.device.serial_number" = "SN: %@";
+"ble.device.bind_status.unbound" = "状态: 未绑定";
+"ble.device.bind_status.bound" = "状态: 已绑定";
+
+/* File Management */
+"file.upload.success" = "文件上传成功";
+"file.upload.failed" = "文件上传失败";
+"file.download.success" = "文件下载成功";
+"file.download.failed" = "文件下载失败";
+"file.delete.confirm" = "确定要删除此文件吗？";
+"file.delete.success" = "文件删除成功";
+"file.delete.failed" = "文件删除失败";
+
+/* Main Screen */
+"main.title" = "PLAUD SDK 演示";
+"main.description" = "本程序展示PLAUD SDK的接入和使用方法";
+"main.button.check_permission" = "检查权限";
+"main.button.scan_device" = "扫描设备";
+
+/* Device Info */
+"device.info.title" = "设备信息";
+"device.info.name" = "设备名称";
+"device.info.sn" = "SN码";
+"device.info.storage" = "设备存储";
+"device.info.battery" = "设备电量";
+"device.info.firmware" = "固件版本";
+"device.info.udisk_access" = "允许 U 盘访问";
+
+/* Device Warnings */
+"device.warning.udisk_mode_active" = "注意：U 盘模式已激活，U 盘模式下不能进行录音、文件传输或修改设置";
+
+/* Device Actions */
+"device.action.start_record" = "开始录音";
+"device.action.pause_record" = "暂停录音";
+"device.action.resume_record" = "恢复录音";
+"device.action.stop_record" = "结束录音";
+"device.action.get_file_list" = "获取文件列表";
+"device.action.sync_file" = "同步云端";
+"device.action.delete_file" = "删除文件";
+"device.action.delete_all_files" = "删除所有文件";
+"device.action.download_transcoded" = "下载文件";
+"device.action.get_storage" = "获取空间";
+"device.action.wifi_setting" = "Wi-Fi上云";
+"device.action.audio_player" = "音频播放";
+"device.action.unbind" = "解绑设备";
+"device.action.disconnect" = "断开连接  ";
+"device.action.view" = "去查看";
+"device.action.transcode" = "去转码";
+"device.action.get_state" = "读取状态";
+"device.action.set_backlight_duration" = "设置背光时长";
+"device.action.read_brightness" = "读取亮度";
+"device.action.set_brightness" = "设置亮度";
+"device.action.read_language" = "读取语言";
+"device.action.set_language" = "设置语言";
+"device.action.set_degree" = "设置眼镜度数";
+"device.action.read_degree" = "读取眼镜度数";
+"device.action.associate_user" = "关联用户";
+
+/* Device Status */
+"device.status.connecting" = "设备连接中";
+"device.status.disconnected" = "设备未连接";
+"device.status.connection_failed" = "设备连接失败";
+"device.status.unknown" = "未知状态";
+"device.status.unbind_success" = "设备已解绑";
+"device.status.downloading" = "下载中";
+"device.status.download_complete" = "下载完成";
+"device.status.record_stopped" = "录音已结束，原因: {reason}";
+"device.status.record_paused" = "录音已暂停";
+"device.status.record_resumed" = "录音已恢复";
+"device.status.record_started" = "录音已开始，文件id:{id}";
+"device.status.connection_success" = "设备连接成功";
+"device.status.charging" = "正在充电中";
+"device.status.not_charging" = "未充电中";
+"device.status.file_list_success" = "获取文件列表成功，文件数目：{count}";
+"device.status.powered_on" = "蓝牙已开启";
+"device.status.decode_failed" = "解码失败";
+"device.status.udisk_access_changed" = "U 盘访问已{status}";
+"device.status.enabled" = "启用";
+"device.status.disabled" = "禁用";
+"device.status.power_charging_changed" = "电量或充电状态改变：{isCharging=%@, level=%d}";
+"device.status.power_changed" = "电量改变：{power=%d, oldPower=%d}";
+"device.status.password_reset" = "重置密码：{password=%d}";
+"device.status.storage" = "存储容量：{total=%d, free=%d, duration=%d}";
+"device.status.state" = "设备状态：{state=%d, privacy=%d, keyState=%d, uDisk=%d}";
+"device.status.unbind_result" = "解绑结果：{status=%d}";
+"device.status.connection_changed" = "连接状态改变：{state=%d}";
+"device.status.backlight_brightness" = "背光亮度：{bright=%d}";
+"device.status.backlight_duration" = "背光时长：{duration=%d}";
+"device.status.language" = "语言：{type=%d}";
+"device.status.glass_degree" = "眼镜度数：{left=%d, right=%d}";
+"device.status.vad_sensitivity_changed" = "VAD灵敏度改变：{value=%d}";
+"device.status.vpu_sensitivity_changed" = "VPU灵敏度改变：{value=%d}";
+"device.status.mic_sensitivity_changed" = "麦克风灵敏度改变：{value=%d}";
+"device.status.uploading" = "正在上传...";
+"device.status.uploading_progress" = "正在上传... {progress}%";
+"device.status.upload_success" = "上传成功";
+"device.error.upload_failed" = "上传失败";
+
+/* Device Status - Record Stop Reasons */
+"device.status.record_stop_reason.1" = "设备端停止录音";
+"device.status.record_stop_reason.2" = "APP端停止录音";
+"device.status.record_stop_reason.3" = "自动时间切片停止录音";
+"device.status.record_stop_reason.4" = "switch开关切换停止录音";
+
+/* Device Errors */
+"device.error.recording_in_progress" = "录音中，请先停止录音";
+"device.error.recording_download_only" = "录音中仅支持下载当前录音文件...";
+"device.error.recording_sync_only" = "录音中仅支持同步当前录音文件...";
+"device.error.get_file_list_first" = "请先获取文件列表...";
+"device.error.cannot_delete_while_recording" = "录音中不能删除文件";
+"device.error.audio_file_not_found" = "音频文件不存在，请先下载并转码";
+"device.error.unbind_failed_working" = "设备解绑失败：正在工作中";
+"device.error.unbind_failed_upgrading" = "设备解绑失败：正在升级中";
+
+/* Device Progress */
+"device.progress.downloading_transcoded" = "转码文件下载";
+"device.progress.downloading_stream" = "流式文件下载";
+"device.progress.uploading" = "文件上传";
+"device.status.uploading_progress" = "正在上传... {progress}%";
+"device.status.upload_success" = "上传成功";
+"device.error.upload_failed" = "上传失败";
+
+/* Device Dialogs */
+"device.dialog.file_count" = "文件数：{count}, 请选择录音文件";
+"device.dialog.file_item" = "[{index}]: 文件ID={fileId}, 大小={size}";
+"device.dialog.downloaded_file_item" = "[{index}]: 文件ID={fileId}, 路径={path}";
+"device.dialog.unbind.title" = "解绑设备";
+"device.dialog.unbind.message" = "确定要解绑当前设备吗？";
+"device.dialog.disconnect.title" = "断开连接";
+"device.dialog.disconnect.message" = "确定要断开与设备的连接吗？";
+"device.dialog.associate_user.title" = "关联用户";
+"device.dialog.associate_user.placeholder" = "用户 ID";
+"device.dialog.associate_user.associate" = "关联";
+"device.dialog.associate_user.dissociate" = "解除关联";
+"device.dialog.associate_user.associate_success" = "用户关联成功";
+"device.dialog.associate_user.associate_fail" = "用户关联失败";
+"device.dialog.associate_user.dissociate_success" = "用户解除关联成功";
+"device.dialog.associate_user.dissociate_fail" = "用户解除关联失败";
+
+
+/* Audio Player */
+"audio.player.title" = "音频播放";
+"audio.player.status.ready" = "准备播放";
+"audio.player.status.playing" = "播放中...";
+"audio.player.status.paused" = "已暂停";
+"audio.player.status.stopped" = "已结束";
+"audio.player.status.completed" = "播放完成";
+"audio.player.status.error" = "播放出错";
+"audio.player.status.load_error" = "音频加载失败: %@";
+"audio.player.status.decode_error" = "解码错误: %@";
+"audio.player.status.decode_unknown_error" = "未知错误";
+
+/* Device Degree */
+"device.degree.left" = "左眼度数";
+"device.degree.right" = "右眼度数";
+
+/* WiFi */
+"wifi.status.config" = "WiFi配网：{status=%d}";
+"wifi.status.get_config" = "获取WiFi配网：{status=%d, ssid=%@}";
+"wifi.status.open" = "开启WiFi：{status=%d, name=%@, wholeName=%@, pass=%@}";
+"wifi.status.close" = "关闭WiFi：{status=%d}";
+
+/* Language Options */
+"language.simplified_chinese" = "简体中文";
+"language.traditional_chinese" = "繁体";
+"language.english" = "英文";
+
+/* Language Selection */
+"language.select" = "选择语言";
+"language.english" = "英文";
+"language.simplified_chinese" = "简体中文";
+
+/* Device State */
+"device.state.connecting" = "设备连接中";
+"device.state.disconnected" = "设备未连接";
+"device.state.connected" = "设备已连接";
+"device.state.connection.failed" = "连接失败";
+"device.state.unknown" = "未知状态";
+
+/* Bluetooth Permission */
+"bluetooth.permission.title" = "蓝牙权限";
+"bluetooth.permission.message" = "请确认打开蓝牙并授权";
+
+/* Device Backlight Duration */
+"device.backlight.duration.10s" = "10秒";
+"device.backlight.duration.20s" = "20秒";
+"device.backlight.duration.30s" = "30秒";
+"device.backlight.duration.always" = "始终";
+
+/* Bluetooth Permission Description */
+"bluetooth.permission.description" = "App需要使用蓝牙连接录音笔，控制录音笔和获取录音文件";
+
+/* Language Switch */
+"language.switch.title" = "切换语言";
+"language.switch.subtitle" = "语言已更改";
+"language.switch.message" = "请重启应用以使语言更改生效。";
+"language.switch.restart_now" = "立即重启";
+"language.switch.restart_later" = "稍后重启";
+
+/* Messages */
+"message.file_list_empty" = "文件列表为空";
+"message.sync_start" = "开始同步第1个录音，sessionId:%@, size:%@";
+"message.input_test_size" = "请输入测试包大小";
+"message.sync_current_only" = "录音中仅支持同步当前录音文件...";
+"message.get_session_list_first" = "请先获取会话列表...";
+"message.usb_mode_error" = "U盘模式不能操作文件";
+"message.bluetooth_reinit" = "蓝牙重新初始化";
+"message.wifi_speed_result" = "WiFi速度测试：{Average=%@, Instant=%@}";
+"message.wifi_speed_failed" = "WiFi速度测试失败：{status=%@}";
+"message.sync_progress" = "开始同步第%d个录音，sessionId:%@, size:%@";
+"message.file_count" = "文件数量：%d";
+"message.wifi_handshake" = "WiFi握手：{status=%@}";
+"message.feature_coming_soon" = "功能开发中，敬请期待";
+
+/* Upload Progress Alert */
+"upload.progress.title" = "正在上传文件";
+"upload.progress.success" = "上传完成";
+"upload.progress.failed" = "上传失败";
+"progress.alert.progress_only" = "%d%%";
+"common.cancel" = "取消";
+
+/* CloudSync Section Titles */
+"cloudsync.section.downloaded_recordings" = "已下载录音";
+
+"cloudsync.delete_synced.title" = "删除本地录音";
+"cloudsync.delete_synced.message" = "是否删除已同步到云端的录音？";
+
+/* AI Process Menu */
+"menu.option.transcribe" = "转写";
+"menu.option.ai_etl" = "总结";
+"menu.option.transcribe_and_etl" = "转写+ETL";
+"menu.option.transcribe_summary" = "转写总结";
+
+/* File Cell */
+"file.cell.uploaded" = "已上传";
+"file.cell.ai_process" = "AI 处理";
+
+/* AI Processing Options */
+"ai.option.speech_to_text" = "语音转文字";
+"ai.option.summary" = "语音摘要";
+"ai.option.translation" = "语音翻译";
+"ai.toast.speech_to_text_wip" = "语音转文字功能待开发";
+"ai.toast.summary_wip" = "语音摘要功能待开发";
+"ai.toast.translation_wip" = "语音翻译功能待开发";
+"ai.toast.transcribe_summary_wip" = "转写总结功能开发中";
+
+/* File Menu Options */
+"menu.option.rename" = "重命名";
+"menu.option.delete" = "删除";
+"menu.option.share" = "分享";
+
+/* AI Toasts */
+"ai.toast.transcribe_wip" = "转写功能待开发";
+"ai.toast.ai_etl_wip" = "总结功能待开发";
+"ai.toast.transcribe_and_etl_wip" = "转写+ETL功能待开发";
+
+/* Workflow Progress */
+"workflow.progress.transcribing" = "正在转写...";
+"workflow.progress.processing_ai" = "AI分析处理中...";
+"workflow.progress.processing_summary" = "AI总结处理中...";
+"workflow.progress.processing_summarize" = "AI总结处理中...";
+"workflow.progress.failed" = "处理失败";
+"workflow.progress.failed_description" = "很抱歉，处理失败，请重试。";
+"workflow.progress.description" = "请稍候，正在处理...";
+"workflow.progress.processing" = "处理中...";
+"workflow.progress.completed" = "已完成";
+"workflow.progress.progress" = "进度";
+"workflow.result.title" = "AI处理结果";
+"workflow.result.speaker" = "Speaker %@";
+"workflow.result.tab.transcription" = "转写结果";
+"workflow.result.tab.ai_analysis" = "AI分析";
+"workflow.result.tab.ai_summary" = "AI总结";
+"workflow.result.ai.summary" = "AI总结";
+"workflow.result.ai.key_points" = "关键点";
+"workflow.result.ai.action_items" = "行动项";
+"workflow.result.ai.participants" = "参与者";
+"workflow.result.ai.template" = "模板";
+"workflow.result.ai.model" = "模型";
+"workflow.result.ai.duration" = "时长";
+"workflow.result.ai.model_info" = "模型信息";
+"workflow.result.ai.markdown" = "详细内容";
+"workflow.result.ai.clinical_report" = "临床报告";
+"workflow.result.ai.deal_analysis" = "成交分析";
+"workflow.result.ai.deal_status" = "成交状态";
+"workflow.result.ai.deal_intention" = "成交意向";
+"workflow.result.ai.comm_feedback" = "沟通反馈";
+"workflow.result.ai.comm_highlight" = "沟通亮点";
+"workflow.result.ai.comm_suggestion" = "沟通建议";
+"workflow.result.empty.transcription" = "无转写内容。";
+"workflow.result.empty.ai_analysis" = "无AI分析内容。";
+"workflow.result.empty.ai_summary" = "暂无AI总结内容。";
+"workflow.result.empty.general" = "此工作流无可用内容。";

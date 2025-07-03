@@ -1,0 +1,11 @@
+framework module PenBleSDK {
+  umbrella header "PenBleSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module PenBleSDK.Swift {
+  header "PenBleSDK-Swift.h"
+  requires objc
+}

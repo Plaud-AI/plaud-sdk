@@ -1,0 +1,40 @@
+/* Common */
+"common.ok" = "OK";
+"common.cancel" = "Cancel";
+"common.confirm" = "Confirm";
+"common.back" = "Back";
+"common.done" = "Done";
+"common.error" = "Error";
+"common.warning" = "Warning";
+"common.success" = "Success";
+
+/* Login & Auth */
+"auth.appkey.title" = "Enter AppKey and AppSecret";
+"auth.appkey.placeholder" = "AppKey";
+"auth.appsecret.placeholder" = "AppSecret";
+"auth.input.empty" = "Please enter AppKey and AppSecret";
+"auth.email.support" = "AppKey and AppSecret are used to ensure PLAUD devices are securely connected and accessed. If you don't have them yet, please contact %@ to apply for test keys";
+
+/* Progress */
+"progress.loading" = "Loading...";
+"progress.connecting" = "Connecting...";
+"progress.downloading" = "Downloading...";
+"progress.uploading" = "Uploading...";
+"progress.processing" = "Processing...";
+
+/* Bluetooth */
+"ble.scan.start" = "Start Scanning";
+"ble.scan.stop" = "Stop Scanning";
+"ble.status.connected" = "Connected";
+"ble.status.disconnected" = "Disconnected";
+"ble.error.connection" = "Connection Failed";
+"ble.error.timeout" = "Connection Timeout";
+
+/* File Management */
+"file.upload.success" = "File Upload Successful";
+"file.upload.failed" = "File Upload Failed";
+"file.download.success" = "File Download Successful";
+"file.download.failed" = "File Download Failed";
+"file.delete.confirm" = "Are you sure you want to delete this file?";
+"file.delete.success" = "File Deleted Successfully";
+"file.delete.failed" = "File Deletion Failed"; 

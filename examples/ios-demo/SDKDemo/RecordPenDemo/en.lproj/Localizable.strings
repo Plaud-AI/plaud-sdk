@@ -1,0 +1,399 @@
+/* Common */
+"common.ok" = "OK";
+"common.cancel" = "Cancel";
+"common.back" = "Back";
+"common.done" = "Done";
+"common.error" = "Error";
+"common.warning" = "Warning";
+"common.success" = "Success";
+"common.refresh" = "Refresh";
+"common.connect" = "Connect";
+"workflow.progress.transcribing" = "Transcribing...";
+"workflow.progress.processing_ai" = "Processing AI Analysis...";
+"workflow.progress.processing_summary" = "Processing AI Summary...";
+"workflow.progress.processing_summarize" = "Processing AI Summarization...";
+"workflow.progress.failed" = "Processing Failed";
+"workflow.progress.failed_description" = "Sorry, processing failed. Please try again.";
+"workflow.progress.description" = "Please wait, processing...";
+"workflow.progress.processing" = "Processing...";
+"workflow.progress.completed" = "Completed";
+"workflow.progress.progress" = "Progress";
+"workflow.result.title" = "AI Processing Result";
+"workflow.result.speaker" = "Speaker %@";
+"workflow.progress.processing_combined" = "Processing...";
+"workflow.result.tab.transcription" = "Transcription";
+"workflow.result.tab.ai_analysis" = "AI Analysis";
+"workflow.result.ai.summary" = "Summary";
+"workflow.result.ai.clinical_report" = "Clinical Report";
+"workflow.result.ai.deal_analysis" = "Deal Analysis";
+"workflow.result.ai.deal_status" = "Status";
+"workflow.result.ai.deal_intention" = "Intention";
+"workflow.result.ai.comm_feedback" = "Communication Feedback";
+"workflow.result.ai.comm_highlight" = "Highlight";
+"workflow.result.ai.comm_suggestion" = "Suggestion";
+"workflow.result.empty.transcription" = "No transcription content.";
+"workflow.result.empty.ai_analysis" = "No AI analysis content.";
+"workflow.result.empty.general" = "No content available for this workflow.";
+
+/* Login & Auth */
+"auth.appkey.title" = "Enter AppKey and AppSecret";
+"auth.appkey.placeholder" = "AppKey";
+"auth.appsecret.placeholder" = "AppSecret";
+"auth.input.empty" = "Please enter AppKey and AppSecret";
+"auth.email.support" = "AppKey and AppSecret are used to ensure PLAUD devices are securely connected and accessed. If you don't have them yet, please contact %@ to apply for test keys";
+
+/* Progress */
+"progress.loading" = "Loading...";
+"progress.connecting" = "Connecting...";
+"progress.downloading" = "Downloading...";
+"progress.uploading" = "Uploading...";
+"progress.processing" = "Processing...";
+
+/* Progress Alert */
+"progress.alert.cancel" = "Cancel";
+"progress.alert.confirm" = "OK";
+"progress.alert.progress_format" = "%@, Progress %d%%";
+"progress.alert.progress_only" = "%d%%";
+"progress.alert.view" = "View";
+"progress.alert.upload" = "Upload File";
+
+/* Bluetooth */
+"ble.scan.title" = "Scan Devices";
+"ble.scan.start" = "Start Scanning";
+"ble.scan.stop" = "Stop Scanning";
+"ble.status.connected" = "Connected";
+"ble.status.disconnected" = "Disconnected";
+"ble.error.connection" = "Connection Failed";
+"ble.error.timeout" = "Connection Timeout";
+"ble.status.authorized" = "Authorized";
+"ble.status.powered_off" = "Bluetooth is Off";
+"ble.status.unauthorized" = "Unauthorized";
+"ble.status.unsupported" = "Device doesn't support Bluetooth";
+"ble.status.resetting" = "Bluetooth is resetting";
+"ble.status.unknown" = "Unknown status";
+"ble.device.signal_strength" = "Signal Strength: %ld dBm";
+"ble.device.serial_number" = "SN: %@";
+"ble.device.bind_status.unbound" = "Status: Unbound";
+"ble.device.bind_status.bound" = "Status: Bound";
+
+/* File Management */
+"file.upload.success" = "File Upload Successful";
+"file.upload.failed" = "File Upload Failed";
+"file.download.success" = "File Download Successful";
+"file.download.failed" = "File Download Failed";
+"file.delete.confirm" = "Are you sure you want to delete this file?";
+"file.delete.success" = "File Deleted Successfully";
+"file.delete.failed" = "File Deletion Failed";
+"file.downloaded.title" = "Downloaded Recordings";
+"file.uploaded.status" = "Uploaded";
+
+/* Main Screen */
+"main.title" = "PLAUD SDK Demo";
+"main.description" = "This App demonstrates how to integrate and use the PLAUD SDK";
+"main.button.check_permission" = "Check Permissions";
+"main.button.scan_device" = "Scan Devices";
+
+/* Device Info */
+"device.info.title" = "Device Info";
+"device.info.name" = "Device Name";
+"device.info.sn" = "Serial Number";
+"device.info.storage" = "Storage";
+"device.info.battery" = "Battery";
+"device.info.firmware" = "Firmware Version";
+"device.info.udisk_access" = "Allow U Disk Access";
+
+/* Device Warnings */
+"device.warning.udisk_mode_active" = "Note: U Disk mode is active. Recording, file transfer and settings modification are disabled in U Disk mode";
+
+/* Device Actions */
+"device.action.start_record" = "Start Recording";
+"device.action.pause_record" = "Pause Recording";
+"device.action.resume_record" = "Resume Recording";
+"device.action.stop_record" = "Stop Recording";
+"device.action.get_file_list" = "Get File List";
+"device.action.sync_file" = "Cloud Sync";
+"device.action.delete_file" = "Delete File";
+"device.action.delete_all_files" = "Delete All Files";
+"device.action.download_transcoded" = "Download File";
+"device.action.get_storage" = "Get Storage";
+"device.action.wifi_setting" = "Wi-Fi Setting";
+"device.action.audio_player" = "Audio Player";
+"device.action.unbind" = "Unbind Device";
+"device.action.disconnect" = "Disconnect  ";
+"device.action.view" = "Open File";
+"device.action.transcode" = "Transcode";
+"device.action.get_state" = "Get State";
+"device.action.set_backlight_duration" = "Set Backlight Duration";
+"device.action.read_brightness" = "Read Brightness";
+"device.action.set_brightness" = "Set Brightness";
+"device.action.read_language" = "Read Language";
+"device.action.set_language" = "Set Language";
+"device.action.set_degree" = "Set Degree";
+"device.action.read_degree" = "Read Degree";
+"device.action.associate_user" = "Associate User";
+
+/* Device Status */
+"device.status.connecting" = "Connecting...";
+"device.status.disconnected" = "Device Disconnected";
+"device.status.connection_failed" = "Connection Failed";
+"device.status.unknown" = "Unknown Status";
+"device.status.unbind_success" = "Device unbinding successful";
+"device.status.downloading" = "Downloading";
+"device.status.download_complete" = "Download complete";
+"device.status.record_stopped" = "Recording stopped, reason: {reason}";
+"device.status.record_paused" = "Recording paused";
+"device.status.record_resumed" = "Recording resumed";
+"device.status.record_started" = "Recording started, file ID: {id}";
+"device.status.connection_success" = "Device connected successfully";
+"device.status.charging" = "Charging";
+"device.status.not_charging" = "Not charging";
+"device.status.file_list_success" = "File list retrieved successfully, file count: {count}";
+"device.status.powered_on" = "Bluetooth is On";
+"device.status.decode_failed" = "Decode Failed";
+"device.status.udisk_access_changed" = "U Disk access has been {status}";
+"device.status.enabled" = "enabled";
+"device.status.disabled" = "disabled";
+"device.status.power_charging_changed" = "Power/Charging Status Changed: {isCharging=%@, level=%d}";
+"device.status.power_changed" = "Power Changed: {power=%d, oldPower=%d}";
+"device.status.password_reset" = "Password Reset: {password=%d}";
+"device.status.storage" = "Storage: {total=%d, free=%d, duration=%d}";
+"device.status.state" = "State: {state=%d, privacy=%d, keyState=%d, uDisk=%d}";
+"device.status.unbind_result" = "Unbind Result: {status=%d}";
+"device.status.connection_changed" = "Connection Status Changed: {state=%d}";
+"device.status.backlight_brightness" = "Backlight Brightness: {bright=%d}";
+"device.status.backlight_duration" = "Backlight Duration: {duration=%d}";
+"device.status.language" = "Language: {type=%d}";
+"device.status.glass_degree" = "Glass Degree: {left=%d, right=%d}";
+"device.status.vad_sensitivity_changed" = "VAD Sensitivity Changed: {value=%d}";
+"device.status.vpu_sensitivity_changed" = "VPU Sensitivity Changed: {value=%d}";
+"device.status.mic_sensitivity_changed" = "Microphone Sensitivity Changed: {value=%d}";
+"device.status.uploading" = "Uploading...";
+
+/* Device Status - Record Stop Reasons */
+"device.status.record_stop_reason.1" = "Stopped from device";
+"device.status.record_stop_reason.2" = "Stopped from app";
+"device.status.record_stop_reason.3" = "Stopped by auto time split";
+"device.status.record_stop_reason.4" = "Stopped by switch toggle";
+
+/* Device Errors */
+"device.error.recording_in_progress" = "Recording in progress, please stop recording first";
+"device.error.recording_download_only" = "Only current recording file can be downloaded during recording...";
+"device.error.recording_sync_only" = "Only current recording file can be synced during recording...";
+"device.error.get_file_list_first" = "Please get file list first...";
+"device.error.cannot_delete_while_recording" = "Cannot delete files while recording";
+"device.error.audio_file_not_found" = "Audio file does not exist, please download and transcode first";
+"device.error.unbind_failed_working" = "Device unbinding failed: device is working";
+"device.error.unbind_failed_upgrading" = "Device unbinding failed: device is upgrading";
+"device.error.connection_failed" = "Device connection failed";
+
+/* Device Progress */
+"device.progress.downloading_transcoded" = "Download File";
+"device.progress.downloading_stream" = "Download Stream File";
+"device.progress.uploading" = "File Upload";
+"device.status.uploading_progress" = "Uploading... {progress}%";
+"device.status.upload_success" = "Upload Successful";
+"device.error.upload_failed" = "Upload Failed";
+
+/* Device Dialogs */
+"device.dialog.file_count" = "File Count: {count}, Please select a recording file";
+"device.dialog.file_item" = "[{index}]: FileId={fileId}, size={size}";
+"device.dialog.downloaded_file_item" = "[{index}]: FileId={fileId}, path={path}";
+"device.dialog.unbind.title" = "Unbind Device";
+"device.dialog.unbind.message" = "Are you sure you want to unbind the current device?";
+"device.dialog.disconnect.title" = "Disconnect Device";
+"device.dialog.disconnect.message" = "Are you sure you want to disconnect from the device?";
+"device.dialog.associate_user.title" = "Associate User";
+"device.dialog.associate_user.placeholder" = "User ID";
+"device.dialog.associate_user.associate" = "Associate";
+"device.dialog.associate_user.dissociate" = "Dissociate";
+"device.dialog.associate_user.associate_success" = "User associated successfully";
+"device.dialog.associate_user.associate_fail" = "User associated failed";
+"device.dialog.associate_user.dissociate_success" = "User dissociated successfully";
+"device.dialog.associate_user.dissociate_fail" = "User dissociated failed";
+
+/* Audio Player */
+"audio.player.title" = "Audio Player";
+"audio.player.status.ready" = "Ready to play";
+"audio.player.status.playing" = "Playing...";
+"audio.player.status.paused" = "Paused";
+"audio.player.status.stopped" = "Stopped";
+"audio.player.status.completed" = "Playback completed";
+"audio.player.status.error" = "Playback error";
+"audio.player.status.load_error" = "Failed to load audio: %@";
+"audio.player.status.decode_error" = "Decode error: %@";
+"audio.player.status.decode_unknown_error" = "Unknown error";
+
+/* File Manager */
+"file.manager.error.file_exists" = "File already exists";
+"file.manager.error.save_failed" = "Failed to save file: %@";
+"file.manager.status.transcode_success" = "Transcoding successful";
+"file.manager.status.transcode_failed" = "Transcoding failed";
+
+/* Device Degree */
+"device.degree.left" = "Left Eye Degree";
+"device.degree.right" = "Right Eye Degree";
+
+/* WiFi */
+"wifi.status.config" = "WiFi Configuration: {status=%d}";
+"wifi.status.get_config" = "Get WiFi Configuration: {status=%d, ssid=%@}";
+"wifi.status.open" = "WiFi Open: {status=%d, name=%@, wholeName=%@, pass=%@}";
+"wifi.status.close" = "WiFi Close: {status=%d}";
+
+/* Language Options */
+"language.simplified_chinese" = "Simplified";
+"language.traditional_chinese" = "Traditional";
+"language.english" = "English";
+
+/* Language Selection */
+"language.select" = "Select Language";
+"language.english" = "English";
+"language.simplified_chinese" = "Simplified Chinese";
+
+/* Device State */
+"device.state.connecting" = "Connecting...";
+"device.state.disconnected" = "Device Disconnected";
+"device.state.connected" = "Device Connected";
+"device.state.connection.failed" = "Connection Failed";
+"device.state.unknown" = "Unknown Status";
+
+/* Bluetooth Permission */
+"bluetooth.permission.title" = "Bluetooth Permission";
+"bluetooth.permission.message" = "Please enable Bluetooth and grant permission";
+"bluetooth.permission.description" = "App needs to use Bluetooth to connect to the recording pen, control it and retrieve recording files";
+
+/* Device Delete Status */
+"device.delete.success" = "Deleted successfully";
+"device.delete.error.recording" = "Cannot delete while recording";
+"device.delete.error.favorite" = "Cannot delete favorite items";
+"device.delete.error.playing" = "Cannot delete while playing";
+
+/* Device Connection */
+"device.connection.failed.title" = "Connection Failed";
+"device.connection.failed.message" = "Unable to connect to device, please try again";
+
+/* Device Operation */
+"device.operation.reset_password" = "Reset Password";
+"device.operation.get_battery" = "Get Battery";
+"device.operation.get_session_list" = "Get Session List";
+"device.operation.backlight_duration" = "Read Backlight Duration";
+"device.operation.wifi_enable" = "Enable WiFi";
+"device.operation.wifi_disable" = "Disable WiFi";
+"device.operation.wifi_config_get" = "Get WiFi Config";
+"device.operation.wifi_config_set" = "Set WiFi Config";
+"device.operation.record_start" = "Start Recording";
+"device.operation.record_pause" = "Pause Recording";
+"device.operation.record_resume" = "Resume Recording";
+"device.operation.record_stop" = "Stop Recording";
+"device.operation.file_sync" = "Sync File";
+"device.operation.file_sync_stop" = "Stop Sync";
+"device.operation.file_delete" = "Delete File";
+"device.operation.file_clear" = "Clear All Files";
+
+/* Device Status */
+"device.status.light" = "Light Status:";
+"device.status.privacy" = "Privacy Setting:";
+
+/* Device Test */
+"device.test.get_url" = "Get URL";
+"device.test.get_ser_token" = "Get SerToken";
+"device.test.get_dev_token" = "Get DevToken";
+"device.test.set_url" = "Set URL";
+"device.test.set_ser_token" = "Set SerToken";
+"device.test.set_dev_token" = "Set DevToken";
+"device.test.server" = "Test Server";
+"device.test.ble_speed_80" = "BLE Speed Test 80";
+"device.test.ble_speed_160" = "BLE Speed Test 160";
+"device.test.ble_speed_stop" = "Stop BLE Speed Test";
+"device.test.wifi_speed_size" = "WiFi Speed Test Package Size";
+"device.test.wifi_speed_start" = "Start WiFi Speed Test";
+"device.test.wifi_speed_stop" = "Stop WiFi Speed Test";
+
+/* Device Sensitivity */
+"device.sensitivity.vad_read" = "Read VAD Sensitivity";
+"device.sensitivity.vad_set" = "Set VAD Sensitivity";
+"device.sensitivity.vpu_read" = "Read VPU Sensitivity";
+"device.sensitivity.vpu_set" = "Set VPU Sensitivity";
+"device.sensitivity.mic_read" = "Read Microphone Gain";
+"device.sensitivity.mic_set" = "Set Microphone Gain";
+
+/* Messages */
+"message.file_list_empty" = "File list is empty";
+"message.sync_start" = "Start syncing the 1st recording, sessionId:%@, size:%@";
+"message.input_test_size" = "Please input test package size";
+"message.sync_current_only" = "Only current recording file can be synced during recording...";
+"message.get_session_list_first" = "Please get session list first...";
+"message.usb_mode_error" = "Cannot operate files in USB mode";
+"message.bluetooth_reinit" = "Reinitializing Bluetooth";
+"message.wifi_speed_result" = "WiFi Speed Test: {Average=%@, Instant=%@}";
+"message.wifi_speed_failed" = "WiFi Speed Test Failed: {status=%@}";
+"message.sync_progress" = "Start syncing recording %d, sessionId:%@, size:%@";
+"message.file_count" = "File count: %d";
+"message.wifi_handshake" = "WiFi Handshake: {status=%@}";
+"message.feature_coming_soon" = "Feature under development, stay tuned";
+
+/* Dialog */
+"dialog.select_recording" = "Select Recording File";
+"dialog.cancel" = "Cancel";
+
+/* Device Backlight Duration */
+"device.backlight.duration.10s" = "10 seconds";
+"device.backlight.duration.20s" = "20 seconds";
+"device.backlight.duration.30s" = "30 seconds";
+"device.backlight.duration.always" = "Always";
+
+/* Language Switch */
+"language.switch.title" = "Language Switch";
+"language.switch.subtitle" = "Language Changed";
+"language.switch.message" = "Please restart the app for the language change to take effect.";
+"language.switch.restart_now" = "Restart Now";
+"language.switch.restart_later" = "Later";
+
+/* Upload Progress Dialog */
+"device.progress.uploading" = "Uploading File";
+"device.status.uploading_progress" = "Uploading... {progress}%";
+"device.status.upload_success" = "Upload Successful";
+"device.error.upload_failed" = "Upload Failed";
+
+/* Upload Progress Alert */
+"upload.progress.title" = "Uploading File";
+"upload.progress.success" = "Upload completed";
+"upload.progress.failed" = "Upload failed";
+"progress.alert.progress_only" = "%d%%";
+"common.cancel" = "Cancel";
+"common.confirm" = "OK";
+
+/* CloudSync Section */
+"cloudsync.section.downloaded_recordings" = "Downloaded Recordings"; 
+
+
+"cloudsync.delete_synced.title" = "Delete Local Recordings";
+"cloudsync.delete_synced.message" = "Delete recordings that have been synced to the cloud?";
+
+/* AI Process Menu */
+"menu.option.transcribe" = "Transcribe";
+"menu.option.ai_etl" = "Summary";
+"menu.option.transcribe_and_etl" = "Transcribe+ETL";
+"menu.option.transcribe_summary" = "Transcribe Summary";
+
+/* File Cell */
+"file.cell.uploaded" = "Uploaded";
+"file.cell.ai_process" = "AI Process";
+
+/* AI Processing Options */
+"ai.option.speech_to_text" = "Speech to Text";
+"ai.option.summary" = "Summary";
+"ai.option.translation" = "Translation";
+"ai.toast.speech_to_text_wip" = "Speech to Text feature is under development";
+"ai.toast.summary_wip" = "Summary feature is under development";
+"ai.toast.translation_wip" = "Translation feature is under development";
+"ai.toast.transcribe_summary_wip" = "Transcribe summary feature is under development.";
+
+/* File Menu Options */
+"menu.option.rename" = "Rename";
+"menu.option.delete" = "Delete";
+"menu.option.share" = "Share";
+
+/* AI Toasts */
+"ai.toast.transcribe_wip" = "Transcribe feature is under development";
+"ai.toast.ai_etl_wip" = "Summary feature is under development";
+"ai.toast.transcribe_and_etl_wip" = "Transcribe+ETL feature is under development";
