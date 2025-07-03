@@ -1,0 +1,277 @@
+<resources>
+    <string name="app_name">Plaud</string>
+    <string name="fragment_intro_title">SDK功能实例演示</string>
+    <string name="fragment_intro_start_scan_button">开始扫描</string>
+    <string name="loading_toast_connecting">正在连接...</string>
+    <string name="item_device_serial_label">序列号: %1$s</string>
+    <string name="item_wifi_info_name_label">WiFi名称</string>
+    <string name="fragment_device_list_title">扫描页面</string>
+    <string name="fragment_device_list_scanning_status">正在扫描中...</string>
+    <string name="fragment_device_list_rescan_button">重新扫描</string>
+    <string name="fragment_device_feature_title">设备信息</string>
+    <string name="fragment_device_feature_serial_label">序列号：%1$s</string>
+    <string name="fragment_device_feature_battery_label">电量：%1$s</string>
+    <string name="fragment_device_feature_storage_label">存储空间：%1$s</string>
+    <string name="fragment_device_feature_storage_usage">%1$dMB / %2$dMB</string>
+    <string name="fragment_device_feature_storage_full">存储已满</string>
+    <string name="fragment_device_feature_record_status_idle">录音状态：空闲</string>
+    <string name="fragment_device_feature_record_status_recording">录音状态：录音中</string>
+    <string name="fragment_device_feature_record_status_paused">录音状态：已暂停</string>
+    <string name="fragment_device_feature_start_recording">开始录音</string>
+    <string name="fragment_device_feature_stop_recording">停止录音</string>
+    <string name="fragment_device_feature_pause_recording">暂停录音</string>
+    <string name="fragment_device_feature_resume_recording">恢复录音</string>
+    <string name="fragment_device_feature_get_status">获取状态</string>
+    <string name="fragment_device_feature_get_files">获取文件</string>
+    <string name="fragment_device_feature_wifi_cloud">WiFi上云</string>
+    <string name="fragment_device_feature_disconnect">断开连接</string>
+    <string name="fragment_device_feature_unbind_device">解绑设备</string>
+    <string name="fragment_device_feature_recorded_files_title">录音文件</string>
+    <string name="fragment_device_feature_files_count_prefix">共 </string>
+    <string name="fragment_device_feature_files_count_suffix"> 个文件</string>
+    <string name="fragment_device_feature_files_count_placeholder">-- 个文件</string>
+    <string name="fragment_device_feature_files_count">%1$d 个文件</string>
+    <string name="fragment_device_feature_clear_files">清空</string>
+    <string name="fragment_device_feature_files_count_formatted">共 %1$d 个文件</string>
+    <string name="fragment_device_wifi_cloud_configure_wifi_button">配置 Wi-Fi</string>
+    <string name="language_chinese">中文</string>
+    <string name="language_english">English</string>
+    <string name="toast_record_failed">录音失败: %1$s</string>
+    <string name="toast_stop_record_failed">停止录音失败: %1$s</string>
+    <string name="toast_pause_record_failed">暂停录音失败: %1$s</string>
+    <string name="toast_resume_record_failed">恢复录音失败: %1$s</string>
+    <string name="toast_bluetooth_permission_required">需要蓝牙权限</string>
+    <string name="toast_storage_permission_granted">已获得存储权限</string>
+    <string name="toast_storage_permission_required_to_save">需要存储权限来保存文件</string>
+    <string name="toast_delete_successful">删除成功</string>
+    <string name="toast_delete_failed">删除失败</string>
+    <string name="toast_clear_successful">列表已清空</string>
+    <string name="toast_clear_failed">清空失败</string>
+    <string name="toast_file_not_exist_download_first">文件不存在，请先下载</string>
+    <string name="toast_file_empty_redownload">文件为空，请重新下载</string>
+    <string name="toast_download_in_progress">正在下载中，请稍后...</string>
+    <string name="toast_download_timeout_failed">下载超时，失败</string>
+    <string name="toast_unbind_successful">解绑成功</string>
+    <string name="toast_unbind_failed">解绑失败</string>
+    <string name="toast_device_status_formatted">设备状态: %1$s</string>
+    <string name="toast_get_file_list_failed">获取文件列表失败</string>
+    <string name="toast_file_not_exist">文件不存在</string>
+    <string name="toast_file_empty">文件为空</string>
+    <string name="toast_save_successful">保存成功</string>
+    <string name="toast_test_result_formatted">测试结果: %1$s</string>
+    <string name="toast_deleted">已删除</string>
+    <string name="edit">编辑</string>
+    <string name="toast_connect_successful">连接成功</string>
+    <string name="toast_connect_failed_with_reason">连接失败: %1$s (错误码: %2$s)</string>
+    <string name="toast_connect_failed_retry">连接失败，请重试</string>
+    <string name="toast_setting_failed">设置失败</string>
+    <string name="toast_already_this_language">当前已是该语言</string>
+    <string name="toast_permission_required_settings">必要权限被拒绝，请在设置中开启</string>
+    <string name="toast_platform_permission_required">没有获得平台授权，请更新AppKey</string>
+    <string name="status_devices_found_formatted">发现%1$d个设备</string>
+    <string name="dialog_title_storage_permission">需要存储权限</string>
+    <string name="dialog_title_clear_list">清空列表</string>
+    <string name="dialog_message_storage_permission_settings">为了保存文件，应用需要访问所有文件的权限。请在设置中授予该权限。</string>
+    <string name="dialog_message_storage_permission_authorize">为了保存文件，应用需要存储权限。</string>
+    <string name="toast_permission_required_to_scan">需要权限才能扫描设备</string>
+    <string name="dialog_message_clear_list_confirm">确定要清空所有文件吗？此操作不可撤销。</string>
+    <string name="dialog_title_delete_file">删除文件</string>
+    <string name="dialog_message_delete_file_confirm">确定要删除此文件吗？此操作不可撤销。</string>
+    <string name="dialog_button_ok">确定</string>
+    <string name="dialog_button_cancel">取消</string>
+    <string name="device_feature_status_recording">录音中</string>
+    <string name="device_feature_status_not_recording">未开始录音</string>
+    <string name="device_feature_status_paused_state">录音状态：已暂停</string>
+    <string name="device_feature_status_recording_state">录音状态：录音中</string>
+    <string name="device_feature_button_stop_recording">停止录音</string>
+    <string name="device_feature_button_resume_recording">恢复录音</string>
+    <string name="toast_write_file_failed_formatted">写入文件失败: %1$s</string>
+    <string name="toast_download_complete">下载完成</string>
+    <string name="toast_download_started">开始下载...</string>
+    <string name="toast_close_file_failed_formatted">关闭文件失败: %1$s</string>
+    <string name="toast_get_files_count_formatted">获取到%1$d个文件</string>
+    <string name="button_wifi_cloud_on">WiFi上云已开启</string>
+    <string name="button_wifi_cloud_off">WiFi上云已关闭</string>
+    <string name="ble_error_bluetooth_not_enabled">请开启蓝牙</string>
+    <string name="ble_error_location_disabled">请开启定位服务</string>
+    <string name="ble_error_no_download_permission">没有下载权限</string>
+    <string name="ble_error_bluetooth_not_supported">设备不支持蓝牙</string>
+    <string name="ble_error_bluetooth_not_connected">蓝牙未连接</string>
+    <string name="ble_error_operation_timeout">操作超时，请重试</string>
+    <string name="ble_error_operation_failed">操作失败，请重试</string>
+    <string name="ble_error_unknown">发生未知错误</string>
+    <string name="ble_error_record_start_failed">开始录音失败</string>
+    <string name="ble_error_record_stop_failed">停止录音失败</string>
+    <string name="ble_error_record_pause_failed">暂停录音失败</string>
+    <string name="ble_error_record_resume_failed">恢复录音失败</string>
+    <string name="connect_error_connecting_in_progress">正在连接中，请稍候...</string>
+    <string name="connect_error_device_not_found">未能找到指定设备</string>
+    <string name="connect_error_generic_fail_with_reason">连接失败: %1$s</string>
+    <string name="connect_error_timeout_retried_formatted">连接超时，已重试%1$d次</string>
+    <string name="connect_error_generic_retried_formatted">连接错误: %1$s，已重试%2$d次</string>
+    <string name="storage_info_formatted">%1$s 已用 / 64GB</string>
+    <string name="fragment_device_feature_storage_loading">存储空间：加载中...</string>
+    <string name="button_select_language">切换语言</string>
+    <string name="dialog_title_select_language">选择语言</string>
+    <string name="button_set_app_key">设置 App Key</string>
+    <string name="button_switch_domain">切换域名</string>
+    <string name="dialog_title_set_app_key">输入 App Key</string>
+    <string name="dialog_hint_app_key">App Key</string>
+    <string name="dialog_button_confirm">确定</string>
+    <string name="toast_app_key_updated">App Key 已更新，正在重新鉴权。</string>
+    <string name="toast_app_key_empty">App Key 不能为空。</string>
+    <string name="toast_domain_switched">域名已切换为: %1$s</string>
+    <string name="toast_invalid_app_key">App Key 无效或已过期，请检查您的 App Key。</string>
+    <string name="connect">连接</string>
+    <string name="dialog_message_set_app_key">请输入您的 App Key 以便我们为您提供服务。</string>
+    <string name="loading_toast_loading">加载中…</string>
+    <string name="file_status_icon_description">文件状态</string>
+    <string name="player_close_button_description">关闭播放器</string>
+    <string name="player_play_pause_button_description">播放或暂停</string>
+    <string name="player_select_a_file_to_play">选择一个文件播放</string>
+
+    <!-- Selection Mode Actions -->
+    <string name="action_select">选择</string>
+    <string name="action_done">完成</string>
+    <string name="action_select_all">全选</string>
+    <string name="action_delete">删除</string>
+    <string name="action_delete_count">删除 (%1$d)</string>
+
+    <string name="action_cancel">取消</string>
+    <string name="action_delete_selected">删除所选文件</string>
+    <string name="action_delete_all">删除全部文件</string>
+    <string name="dialog_message_delete_selected_confirm">确定要删除 %1$d 个选中的文件吗？</string>
+
+    <!-- Device Status -->
+    <string name="device_status_idle">空闲</string>
+    <string name="device_status_vpr">VPR模式</string>
+    <string name="device_status_call">通话模式</string>
+    <string name="device_status_recording">录音中</string>
+    <string name="device_status_unknown">未知状态: %1$d</string>
+
+    <string name="toast_upload_failed_with_reason">Upload failed: %s</string>
+    <string name="toast_sd_card_not_found">SD card not found</string>
+
+    <string name="fragment_device_wifi_cloud_auto_sync_label">自动上云</string>
+    <string name="fragment_device_wifi_cloud_wifi_list_header">已存网络</string>
+
+    <!-- Wifi -->
+    <string name="fragment_device_wifi_cloud_title">Wi-Fi上云</string>
+    <string name="fragment_device_wifi_setting_title">Wi-Fi 设置</string>
+    <string name="fragment_device_wifi_setting_subtitle_2_4_ghz_only">仅支持 2.4 GHz Wi-Fi</string>
+    <string name="fragment_device_wifi_setting_name_hint">Wi-Fi 名称 (SSID)</string>
+    <string name="fragment_device_wifi_setting_password_hint">密码</string>
+    <string name="fragment_device_wifi_setting_save_button">保存</string>
+    <string name="fragment_device_wifi_setting_test_button">测试连接</string>
+    <string name="fragment_device_wifi_setting_forget_network_button">忘记此网络</string>
+    <string name="toast_save_failed">保存失败</string>
+    <string name="toast_wifi_ssid_cannot_be_empty">Wi-Fi名称不能为空</string>
+    <string name="toast_save_before_test">请先保存网络后再测试</string>
+    <string name="toast_test_command_sent">已发送测试指令，请等待约10秒查看结果</string>
+    <string name="wifi_test_result_0">成功</string>
+    <string name="wifi_test_result_1">密码错误</string>
+    <string name="wifi_test_result_2">找不到SSID</string>
+    <string name="wifi_test_result_3">连接超时</string>
+    <string name="wifi_test_result_4">未知错误</string>
+    <string name="wifi_test_result_unknown">未知结果: %1$s</string>
+    <string name="loading_dialog_testing_connection">正在测试连接...</string>
+    <string name="toast_parse_state_failed">解析设备状态失败: %s</string>
+    <string name="dialog_device_status_title">设备状态</string>
+    <string name="fragment_device_feature_getting_state">正在获取状态...</string>
+    <string name="fragment_file_list_title">录音文件</string>
+
+    <string name="dialog_status_label">状态</string>
+    <string name="dialog_paused_label">是否暂停</string>
+    <string name="dialog_session_id_label">会话ID</string>
+    <string name="dialog_yes">是</string>
+    <string name="dialog_no">否</string>
+
+    <string name="setting_domain">正在设置域名...</string>
+    <string name="toast_domain_set_successfully">域名设置成功</string>
+    <string name="toast_failed_to_set_domain">域名设置失败</string>
+    <string name="toast_timeout_no_response">十秒无响应</string>
+    <string name="button_send_http_token">发送HTTP令牌</string>
+    <string name="button_set_wifi_domain">设置WiFi同步域名</string>
+    <string name="file_upload_icon_description">上传文件</string>
+    <string name="file_delete_local_icon_description">删除本地文件</string>
+
+    <string name="toast_file_deleted">文件已删除</string>
+    <string name="toast_failed_to_delete_file">删除文件失败</string>
+    <string name="toast_file_not_found">未找到文件</string>
+    <string name="toast_files_deleted">%d 个文件已删除</string>
+    <string name="toast_file_not_found_for_upload">未找到要上传的文件</string>
+    <string name="toast_upload_successful">上传成功</string>
+    <string name="toast_batch_upload_started">批量上传已开始</string>
+    <string name="toast_batch_upload_completed">%1$d/%2$d files uploaded successfully.</string>
+    <string name="toast_local_file_deleted">Local file deleted</string>
+    <string name="dialog_delete_local_file_title">Delete Local File</string>
+    <string name="dialog_delete_local_file_message">Are you sure you want to delete the locally stored version of this file?</string>
+
+    <string name="action_upload">上传</string>
+    <string name="action_download">下载</string>
+
+    <string name="dialog_title_delete_files">删除文件</string>
+    <string name="dialog_message_delete_files">确定要删除选中的 %d 个文件吗？此操作不可撤销。</string>
+
+    <string name="selected_files_count">已选择 %d 个文件</string>
+
+    <string name="toast_upload_complete">Upload complete</string>
+    <string name="toast_upload_failed">Upload failed</string>
+    <string name="toast_upload_progress">Upload progress: %1$d%%, Speed: %2$.2f KB/s</string>
+    <string name="toast_download_error">Download Error: %1$s</string>
+
+    <string name="toast_file_not_downloaded">File not downloaded. Please download it first.</string>
+    <string name="toast_another_download_in_progress">Another download is already in progress.</string>
+    <string name="toast_download_failed">Download failed: %1$s</string>
+    <string name="toast_failed_to_delete_local_file">Failed to delete local file.</string>
+
+    <string name="sdk_version_label">SDK Version: %s</string>
+    <string name="title_activity_file_list">FileListActivity</string>
+    <string name="mic_gain_label">麦克风增益</string>
+    <string name="udisk_mode_label">U盘模式</string>
+    <string name="dialog_hint_app_secret">App Secret</string>
+    <string name="button_bind_cloud">绑定云服务</string>
+    <string name="button_unbind_cloud">解绑云服务</string>
+    <string name="toast_bind_successful">云服务绑定成功</string>
+    <string name="toast_bind_failed">云服务绑定失败</string>
+    <string name="device_details">设备详情</string>
+
+    <!-- Permissions -->
+
+    <!-- New action -->
+    <string name="action_check_status">Check Status</string>
+    <string name="action_submit">Submit</string>
+
+    <string name="domain_china_prod">国内生产</string>
+    <string name="domain_us_prod">美国生产环境</string>
+    <string name="domain_us_test">美国测试环境</string>
+
+    <string name="app_key_preset_china">预设：国内生产</string>
+    <string name="app_key_preset_us">预设：美国生产环境</string>
+    <string name="app_key_preset_custom">自定义...</string>
+    <string name="toast_app_key_preset_applied">已应用预设: %1$s</string>
+
+    <string name="title_devices">Devices</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="storage_permission_permanently_denied_message">Storage permission is required to download files. Please enable it in the app settings.</string>
+
+    <string name="summary_title">摘要</string>
+    <string name="action_close">关闭</string>
+    <string name="action_view_summary">查看摘要</string>
+    <string name="action_submit_text">提交</string>
+    <string name="action_check_status_text">检查状态</string>
+    <string name="toast_environment_switched_for_language">环境已切换到：%1$s</string>
+    <string name="current_environment_info">当前环境：%1$s (%2$s)</string>
+    <string name="toast_language_and_environment_switched">语言已切换到%1$s，环境自动切换到%2$s</string>
+    <string name="button_show_environment_info">环境信息</string>
+
+    <!-- Language Config Manager strings -->
+    <string name="toast_language_config_not_found">未找到语言配置</string>
+    <string name="toast_language_config_applied">已应用配置：%1$s</string>
+    <string name="toast_language_config_apply_failed">应用配置失败</string>
+
+    <!-- AppKey setting dialog strings -->
+    <string name="dialog_btn_set">设置</string>
+    <string name="dialog_btn_cancel">取消</string>
+    <string name="toast_app_key_set_success">App Key 设置成功</string>
+</resources>

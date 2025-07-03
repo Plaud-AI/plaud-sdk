@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/dialog_rounded_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/mic_gain_label"
+        android:textAppearance="?attr/textAppearanceTitleLarge"
+        android:layout_marginBottom="16dp"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tv_dialog_mic_gain_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?attr/textAppearanceHeadlineSmall"
+        android:layout_marginBottom="8dp"
+        tools:text="15"
+        android:textSize="16sp"/>
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/slider_dialog_mic_gain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stepSize="1.0"
+        android:valueFrom="0.0"
+        android:valueTo="30.0"
+        app:labelBehavior="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:gravity="end">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_dialog_cancel"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@android:string/cancel"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_dialog_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@android:string/ok"/>
+    </LinearLayout>
+</LinearLayout> 

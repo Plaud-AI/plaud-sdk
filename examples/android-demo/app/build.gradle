@@ -1,0 +1,93 @@
+//buildscript {
+//    ext.kotlin_version = '1.9.0'
+//    repositories {
+//        google()
+//        mavenCentral()
+//    }
+//
+//    dependencies {
+//        classpath 'com.android.tools.build:gradle:8.2.0'
+//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+//        classpath 'com.google.gms:google-services:4.3.14' // This version avoids error: Missing google_app_id. Firebase Analytics disabled. See https://goo.gl/NAOOOI
+//    }
+//}
+
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+}
+
+android {
+    namespace = "com.plaud.nicebuild"
+    compileSdk = 33
+    
+    buildFeatures {
+        buildConfig = true
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.plaud.nicebuild"
+        minSdk = 21
+        targetSdk = 33
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+     // Include SDK aar dependency
+     implementation(name: 'plaud-sdk', ext: 'aar')
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.material:material:1.7.0'
+
+    // SDK basic dependencies
+    implementation("com.google.guava:guava:28.2-android")
+    implementation "androidx.navigation:navigation-fragment-ktx:2.5.3"
+    implementation "androidx.navigation:navigation-ui-ktx:2.5.3"
+    
+    // SDK log dependencies
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'com.github.tony19:logback-android:2.0.0'
+    implementation 'org.slf4j:slf4j-api:1.7.32'
+
+    // SDK network dependencies
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
+    
+    // SDK Firebase依赖
+    implementation platform('com.google.firebase:firebase-bom:31.2.3')
+    implementation 'com.google.firebase:firebase-analytics'
+
+    implementation 'com.writingminds:FFmpegAndroid:0.3.2'
+//    implementation 'com.arthenica:mobile-ffmpeg-full:4.4.LTS'
+
+    // For Markdown rendering
+    implementation "io.noties.markwon:core:4.6.2"
+}
