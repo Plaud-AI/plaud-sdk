@@ -72,6 +72,13 @@ PLAUD SDK is designed to work across all platforms. ​Support for Android and i
 
 See the [SDK Integration Guide](https://github.com/Plaud-AI/plaud-sdk/blob/main/docs/sdk-integration-guide.md)
 
+## Examples
+
+Check out our example applications:
+
+- [Android Demo App](https://github.com/Plaud-AI/plaud-sdk/tree/main/examples/android)
+- [iOS Demo App](https://github.com/Plaud-AI/plaud-sdk/tree/main/examples/ios)
+
 ## FAQ
 
 ### How to get a PLAUD device?
