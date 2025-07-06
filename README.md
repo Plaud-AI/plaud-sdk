@@ -76,8 +76,8 @@ See the [SDK Integration Guide](https://github.com/Plaud-AI/plaud-sdk/blob/main/
 
 Check out our example applications:
 
-- [Android Demo App](https://github.com/Plaud-AI/plaud-sdk/tree/main/examples/android)
-- [iOS Demo App](https://github.com/Plaud-AI/plaud-sdk/tree/main/examples/ios)
+- [Android Demo App](https://github.com/Plaud-AI/plaud-sdk/tree/main/examples/android-demo)
+- [iOS Demo App](https://github.com/Plaud-AI/plaud-sdk/tree/main/examples/ios-demo)
 
 ## FAQ
 
