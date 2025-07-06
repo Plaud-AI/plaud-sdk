@@ -17,9 +17,9 @@ This is the official hub for the PLAUD SDK. Use this SDK to integrate PLAUD's AI
 
 ## System Architecture
 
-- **PLAUD SDK**: Core software development kit for third-party integration
-- **Client Host App**: Your application that integrates the PLAUD SDK
-- **PLAUD Template App**: Pre-built template for rapid deployment of custom solutions
+- **PLAUD SDK**: A software development kit enabling third-party applications to integrate with PLAUD's AI-powered hardware and software services
+- **Client Host App**: Your application that integrates the PLAUD SDK to access PLAUD's hardware and software services
+- **PLAUD Template App**: A pre-built template app provided by PLAUD, enabling enterprises to rapidly customize and deploy private-branded solutions via APIs and Apps
 
 <p align="center">
   <img  src="/assets/outline-light.png">
