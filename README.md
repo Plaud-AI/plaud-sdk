@@ -88,7 +88,17 @@ PLAUD devices are available for purchase through our [official website](https://
 An appKey is required for secure device connection and access. If you don't have one, contact support@plaud.ai to request a test key, including your company name and intended use case. Then begin testing by following these steps:  
 1. Build and run the Demo app in the `examples` folder.  
 2. Enter your appKey (generated above).  
-3. Scan for available devices and connect to yours.  
+3. Scan for available devices and connect to yours.
+
+### Can I test without a physical device?
+NO，​a physical devices is currently a necessity.
+
+### What audio formats are supported?
+The SDK supports MP3, WAV formats currently.
+
+### Is offline mode supported?
+Yes, basic device operations work offline. Cloud features require an internet connection.
+
 
 ## Try Playground App
 Coming soon
