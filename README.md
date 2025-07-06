@@ -6,7 +6,22 @@
 [![iOS](https://img.shields.io/badge/iOS-13.0%2B-brightgreen.svg?style=flat)](https://developer.apple.com/ios/)
 
 
-This is the official hub for the PLAUD SDK. Use this SDK to integrate PLAUD's AI-powered hardware and software services into your applications or products, including but not limited to:
+This is the official hub for the PLAUD SDK. 
+
+## 📋 Table of Contents
+
+- [Introduction](#-features)
+- [System Architecture](#-system-architecture)
+- [Supported Platforms](#-supported-platforms)
+- [Core Features](#-core-features)
+- [Integration](#-Integration)
+- [Examples](#-examples)
+- [FAQ](#-faq)
+- [Support](#-support)
+- [License](#-license)
+
+## Introduction
+You can use this SDK to integrate PLAUD's AI-powered hardware and software services into your applications or products, including but not limited to:
 
 - 🔌&nbsp;Connecting to PLAUD devices
 - 📊&nbsp;Monitoring device settings and status
@@ -68,7 +83,7 @@ PLAUD SDK is designed to work across all platforms. ​Support for Android and i
   - ⚙️ Customizable templates
   - 🌐 Multi-language support
 
-## Integrate the SDK
+## Integration
 
 See the [SDK Integration Guide](https://github.com/Plaud-AI/plaud-sdk/blob/main/docs/sdk-integration-guide.md)
 
