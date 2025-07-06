@@ -33,7 +33,7 @@ You can use this SDK to integrate PLAUD's AI-powered hardware and software servi
 
 ## System Architecture
 
-The PLAUD system architecture is designed as a modular, AI-powered platform that seamlessly integrates hardware devices with intelligent software services to capture, process, and extract insights from audio recordings. The architecture consists of three interconnected layers that work together to deliver a comprehensive audio intelligence solution. Core Components:
+The PLAUD system architecture is designed as a modular, AI-powered platform that seamlessly integrates hardware devices with intelligent software services to capture, process, and extract insights from audio recordings. The architecture consists of three interconnected layers that work together to deliver a comprehensive audio intelligence solution. Several key concepts are explained below:
 
 - **PLAUD SDK**: A software development kit enabling third-party applications to integrate with PLAUD's AI-powered hardware and software services. The SDK serves as the central hub.
 - **Client Host App**: The client's app that integrates the PLAUD SDK to access PLAUD's hardware and software services. This enables organizations to incorporate PLAUD's audio intelligence capabilities into their existing applications across various domains.
