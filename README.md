@@ -1,5 +1,11 @@
 # Welcome to PLAUD SDK
 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Android%20%7C%20iOS-lightgrey.svg)](https://github.com/Plaud-AI/plaud-sdk)
+[![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
+[![iOS](https://img.shields.io/badge/iOS-13.0%2B-brightgreen.svg?style=flat)](https://developer.apple.com/ios/)
+
+
 This is the official hub for the PLAUD SDK. Use this SDK to integrate PLAUD's AI-powered hardware and software services into your applications or products, including but not limited to:
 
 - 🔌&nbsp;Connecting to PLAUD devices
