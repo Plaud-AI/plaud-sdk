@@ -39,30 +39,38 @@ PLAUD SDK is designed to work across all platforms. ​Support for Android and i
 
 ## Core Features
 
--  📡&nbsp;Scan and discover nearby devices
--  🔗&nbsp;Bind and connect to target devices
--  📊&nbsp;Retrieve device status
--  💾&nbsp;Check device storage capacity
--  🔋&nbsp;Monitor device power status
--  ⏺️&nbsp;Start/pause/resume/stop recordings
--  📋&nbsp;Get recording item lists
--  ⬇️&nbsp;Start/cancel recording downloads
--  🗑️&nbsp;Delete specific recordings
--  🧹&nbsp;Clear all recording items
--  📶&nbsp;Configure device Wi-Fi Sync:
-    - ➕&nbsp;Add Wi-Fi networks
-    - ➖&nbsp;Remove Wi-Fi networks
-    - 🔧&nbsp;Update Wi-Fi configurations
-    - 📝&nbsp;Retrieve saved Wi-Fi lists
-    - ☁️&nbsp;Configure upload destinations
--  🤖&nbsp;Cloud Processing Service:
-    - 🎯&nbsp;AI-powered transcription & summarization
-    - ⚙️&nbsp;Customizable processing preferences and templates
+### Device Management
+- 📡 Scan and discover nearby devices
+- 🔗 Bind and connect to target devices
+- 📊 Retrieve real-time device status
+- 💾 Check device storage capacity
+- 🔋 Monitor battery level and charging status
+
+### Recording Operations
+- ⏺️ Start/pause/resume/stop recordings
+- 📋 Get recording item lists with metadata
+- ⬇️ Download recordings with progress tracking
+- 🗑️ Delete specific recordings
+- 🧹 Clear all recording items
+
+### Network Configuration
+- 📶 Configure device Wi-Fi settings:
+  - ➕ Add Wi-Fi networks
+  - ➖ Remove Wi-Fi networks
+  - 🔧 Update Wi-Fi configurations
+  - 📝 Retrieve saved Wi-Fi lists
+  - ☁️ Configure upload destinations
+
+### Cloud Services
+- 🤖 AI-powered processing:
+  - 🎯 Automatic transcription
+  - 📝 Smart summarization
+  - ⚙️ Customizable templates
+  - 🌐 Multi-language support
 
 ## Integrate the SDK
 
 See the [SDK Integration Guide](https://github.com/Plaud-AI/plaud-sdk/blob/main/docs/sdk-integration-guide.md)
-
 
 ## FAQ
 
