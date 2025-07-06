@@ -85,10 +85,10 @@ Check out our example applications:
 PLAUD devices are available for purchase through our [official website](https://www.plaud.ai/) or other authorized online retailers.
 
 ### How to test PLAUD devices with my system?
-An appKey is required for secure device connection and access. If you don't have one, contact support@plaud.ai to request a test key. Then you can begin testing:
-1. Build and run the Demo app in the `examples` folder
-2. Enter your above appKey 
-3. Scan for and connect to your device
+An appKey is required for secure device connection and access. If you don't have one, contact support@plaud.ai to request a test key, including your company name and intended use case. Then begin testing by following these steps:  
+1. Build and run the Demo app in the `examples` folder.  
+2. Enter your appKey (generated above).  
+3. Scan for available devices and connect to yours.  
 
 ## Try Playground App
 Coming soon
