@@ -2,12 +2,12 @@
 
 This is the official hub for the PLAUD SDK. Use this SDK to integrate PLAUD's AI-powered hardware and software services into your applications or products, including but not limited to:
 
-- Connecting to PLAUD devices
-- Monitoring device settings and status
-- Controlling device operations such as starting, stopping, and more
-- Modifying device configurations to meet your requirements
-- Retrieving recordings produced by devices after obtaining authorization
-- Integrating with your workflow via PLAUD Cloud or self-hosted services
+- 🔌&nbsp;Connecting to PLAUD devices
+- 📊&nbsp;Monitoring device settings and status
+- 🎮&nbsp;Controlling device operations such as starting, stopping, and more
+- ⚙️&nbsp;Modifying device configurations to meet your requirements
+- 📥&nbsp;Retrieving recordings produced by devices after obtaining authorization
+- 🔄&nbsp;Integrating with your workflow via PLAUD Cloud or self-hosted services
 
 ## System Architecture   
 
