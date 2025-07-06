@@ -31,25 +31,25 @@ PLAUD SDK is designed to work across all platforms. ​Support for Android and i
 
 ## Core Features
 
-- [x] Scan and discover nearby devices
-- [x] Bind and connect to target devices
-- [x] Retrieve device status
-- [x] Check device storage capacity
-- [x] Monitor device power status
-- [x] Start/pause/resume/stop recordings
-- [x] Get recording item lists
-- [x] Start/cancel recording downloads
-- [x] Delete specific recordings
-- [x] Clear all recording items
-- [x] Configure device Wi-Fi Sync:
-    - Add Wi-Fi networks
-    - Remove Wi-Fi networks
-    - Update Wi-Fi configurations
-    - Retrieve saved Wi-Fi lists
-    - Configure upload destinations
-- [x] Cloud Processing Service:
-    - AI-powered transcription & summarization
-    - Customizable processing preferences and templates
+- [x] 📡&nbsp;Scan and discover nearby devices
+- [x] 🔗&nbsp;Bind and connect to target devices
+- [x] 📊&nbsp;Retrieve device status
+- [x] 💾&nbsp;Check device storage capacity
+- [x] 🔋&nbsp;Monitor device power status
+- [x] ⏺️&nbsp;Start/pause/resume/stop recordings
+- [x] 📋&nbsp;Get recording item lists
+- [x] ⬇️&nbsp;Start/cancel recording downloads
+- [x] 🗑️&nbsp;Delete specific recordings
+- [x] 🧹&nbsp;Clear all recording items
+- [x] 📶&nbsp;Configure device Wi-Fi Sync:
+    - ➕&nbsp;Add Wi-Fi networks
+    - ➖&nbsp;Remove Wi-Fi networks
+    - 🔧&nbsp;Update Wi-Fi configurations
+    - 📝&nbsp;Retrieve saved Wi-Fi lists
+    - ☁️&nbsp;Configure upload destinations
+- [x] 🤖&nbsp;Cloud Processing Service:
+    - 🎯&nbsp;AI-powered transcription & summarization
+    - ⚙️&nbsp;Customizable processing preferences and templates
 
 ## Integrate the SDK
 
