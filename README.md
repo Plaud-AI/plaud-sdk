@@ -31,8 +31,8 @@ PLAUD SDK is designed to work across all platforms. ​Support for Android and i
 
 | Platform | Status | Min Version |
 |----------|--------|-------------|
-| Android  | ✅ Available | API 21+ |
 | iOS      | ✅ Available | iOS 13.0+ |
+| Android  | ✅ Available | API 21+ |
 | Web      | 🚧 In Development | - |
 | macOS    | 🚧 In Development | - |
 | Windows  | 🚧 In Development | - |
@@ -76,8 +76,8 @@ See the [SDK Integration Guide](https://github.com/Plaud-AI/plaud-sdk/blob/main/
 
 Check out our example applications:
 
-- [Android Demo App](https://github.com/Plaud-AI/plaud-sdk/tree/main/examples/android-demo)
 - [iOS Demo App](https://github.com/Plaud-AI/plaud-sdk/tree/main/examples/ios-demo)
+- [Android Demo App](https://github.com/Plaud-AI/plaud-sdk/tree/main/examples/android-demo)
 
 ## FAQ
 
