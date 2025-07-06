@@ -57,21 +57,21 @@ PLAUD SDK is designed to work across all platforms. ​Support for Android and i
 
 ## Core Features
 
-### Device management
+### Device Management
 - 📡 Scan and discover nearby devices
 - 🔗 Bind and connect to target devices
 - 📊 Retrieve real-time device status
 - 💾 Check device storage capacity
 - 🔋 Monitor battery level and charging status
 
-### Recording operations
+### Recording Operations
 - ⏺️ Start/pause/resume/stop recordings
 - 📋 Get recording item lists with metadata
 - ⬇️ Download recordings with progress tracking
 - 🗑️ Delete specific recordings
 - 🧹 Clear all recording items
 
-### Network configuration
+### Network Configuration
 - 📶 Configure device Wi-Fi settings:
   - ➕ Add Wi-Fi networks
   - ➖ Remove Wi-Fi networks
@@ -79,7 +79,7 @@ PLAUD SDK is designed to work across all platforms. ​Support for Android and i
   - 📝 Retrieve saved Wi-Fi list
   - ☁️ Configure upload destinations
 
-### Cloud services
+### Cloud Services
 - 🤖 AI-powered processing:
   - 🎯 Automatic transcription
   - 📝 Smart summarization
