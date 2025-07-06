@@ -8,7 +8,7 @@
 
 This is the official hub for the PLAUD SDK. 
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Introduction](#-features)
 - [System Architecture](#-system-architecture)
