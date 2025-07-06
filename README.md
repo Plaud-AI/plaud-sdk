@@ -72,12 +72,11 @@ PLAUD SDK is designed to work across all platforms. ​Support for Android and i
 - 🧹 Clear all recording items
 
 ### Network Configuration
-- 📶 Configure device Wi-Fi settings:
-  - ➕ Add Wi-Fi networks
-  - ➖ Remove Wi-Fi networks
-  - 🔧 Update Wi-Fi configurations
-  - 📝 Retrieve saved Wi-Fi list
-  - ☁️ Configure upload destinations
+- ➕ Add Wi-Fi networks
+- ➖ Remove Wi-Fi networks
+- 🔧 Update Wi-Fi configurations
+- 📝 Retrieve saved Wi-Fi list
+- ☁️ Configure upload destinations
 
 ### Cloud Services
 - 🤖 AI-powered processing:
