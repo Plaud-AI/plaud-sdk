@@ -29,11 +29,13 @@ This is the official hub for the PLAUD SDK. Use this SDK to integrate PLAUD's AI
 
 PLAUD SDK is designed to work across all platforms. ​Support for Android and iOS is now available, and additional platforms are currently under development.
 
-- [x] Android
-- [x] iOS
-- [ ] Web
-- [ ] macOS
-- [ ] Windows
+| Platform | Status | Min Version |
+|----------|--------|-------------|
+| Android  | ✅ Available | API 21+ |
+| iOS      | ✅ Available | iOS 13.0+ |
+| Web      | 🚧 In Development | - |
+| macOS    | 🚧 In Development | - |
+| Windows  | 🚧 In Development | - |
 
 ## Core Features
 
