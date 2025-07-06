@@ -10,13 +10,13 @@ This is the official hub for the PLAUD SDK.
 
 ## Table of Contents
 
-- [Introduction](#-features)
+- [Introduction](#-Introduction)
 - [System Architecture](#-system-architecture)
 - [Supported Platforms](#-supported-platforms)
 - [Core Features](#-core-features)
 - [Integration](#-Integration)
 - [Examples](#-examples)
-- [FAQ](#-faq)
+- [FAQ](#-FAQ)
 - [Support](#-support)
 - [License](#-license)
 
