@@ -109,7 +109,7 @@ An appKey is required for secure device connection and access. If you don't have
 3. Scan for available devices and connect to yours.
 
 ### Can I test without a physical device?
-NO，​a physical devices is currently a necessity.
+No, ​a physical device is currently a necessity.
 
 ### What audio formats are supported?
 The SDK supports MP3, WAV formats currently.
