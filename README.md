@@ -85,3 +85,19 @@ An appKey is required for secure device connection and access. If you don't have
 
 ## Try Playground App
 Coming soon
+
+## Support
+
+- 📧 Email: support@plaud.ai
+- 📖 Documentation: [plaud.mintlify.app](https://plaud.mintlify.app)
+- 🐛 Issues: [GitHub Issues](https://github.com/Plaud-AI/plaud-sdk/issues)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<p align="center">
+  Made with ❤️ by the PLAUD Team
+</p> 
