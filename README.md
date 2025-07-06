@@ -10,15 +10,15 @@ This is the official hub for the PLAUD SDK.
 
 ## Table of Contents
 
-- [Introduction](#-Introduction)
-- [System Architecture](#-system-architecture)
-- [Supported Platforms](#-supported-platforms)
-- [Core Features](#-core-features)
-- [Integration](#-Integration)
-- [Examples](#-examples)
-- [FAQ](#-FAQ)
-- [Support](#-support)
-- [License](#-license)
+- [Introduction](#introduction)
+- [System Architecture](#system-architecture)
+- [Supported Platforms](#supported-platforms)
+- [Core Features](#core-features)
+- [Integration](#integration)
+- [Examples](#examples)
+- [FAQ](#faq)
+- [Support](#support)
+- [License](#license)
 
 ## Introduction
 You can use this SDK to integrate PLAUD's AI-powered hardware and software services into your applications or products, including but not limited to:
