@@ -51,9 +51,9 @@ PLAUD SDK is designed to work across all platforms. ​Support for Android and i
 |----------|--------|-------------|
 | iOS      | ✅ Available | iOS 13.0+ |
 | Android  | ✅ Available | API 21+ |
-| Web      | 🚧 In Development | - |
-| macOS    | 🚧 In Development | - |
-| Windows  | 🚧 In Development | - |
+| Web      | 🚧 Under Development | - |
+| macOS    | 🚧 Under Development | - |
+| Windows  | 🚧 Under Development | - |
 
 ## Core Features
 
