@@ -31,23 +31,23 @@ PLAUD SDK is designed to work across all platforms. ​Support for Android and i
 
 ## Core Features
 
-- [x] 📡&nbsp;Scan and discover nearby devices
-- [x] 🔗&nbsp;Bind and connect to target devices
-- [x] 📊&nbsp;Retrieve device status
-- [x] 💾&nbsp;Check device storage capacity
-- [x] 🔋&nbsp;Monitor device power status
-- [x] ⏺️&nbsp;Start/pause/resume/stop recordings
-- [x] 📋&nbsp;Get recording item lists
-- [x] ⬇️&nbsp;Start/cancel recording downloads
-- [x] 🗑️&nbsp;Delete specific recordings
-- [x] 🧹&nbsp;Clear all recording items
-- [x] 📶&nbsp;Configure device Wi-Fi Sync:
+-  📡&nbsp;Scan and discover nearby devices
+-  🔗&nbsp;Bind and connect to target devices
+-  📊&nbsp;Retrieve device status
+-  💾&nbsp;Check device storage capacity
+-  🔋&nbsp;Monitor device power status
+-  ⏺️&nbsp;Start/pause/resume/stop recordings
+-  📋&nbsp;Get recording item lists
+-  ⬇️&nbsp;Start/cancel recording downloads
+-  🗑️&nbsp;Delete specific recordings
+-  🧹&nbsp;Clear all recording items
+-  📶&nbsp;Configure device Wi-Fi Sync:
     - ➕&nbsp;Add Wi-Fi networks
     - ➖&nbsp;Remove Wi-Fi networks
     - 🔧&nbsp;Update Wi-Fi configurations
     - 📝&nbsp;Retrieve saved Wi-Fi lists
     - ☁️&nbsp;Configure upload destinations
-- [x] 🤖&nbsp;Cloud Processing Service:
+-  🤖&nbsp;Cloud Processing Service:
     - 🎯&nbsp;AI-powered transcription & summarization
     - ⚙️&nbsp;Customizable processing preferences and templates
 
