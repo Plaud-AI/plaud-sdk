@@ -22,7 +22,7 @@ This is the official hub for the PLAUD SDK.
 
 ## Introduction
 
-You can use this SDK to integrate PLAUD's AI-powered hardware and software services into your applications or products, including but not limited to:
+You can use this SDK to integrate PLAUD's AI-powered hardware and software services into your products, including but not limited to:
 
 - 🔌&nbsp;Connecting to PLAUD devices
 - 📊&nbsp;Monitoring device settings and status
