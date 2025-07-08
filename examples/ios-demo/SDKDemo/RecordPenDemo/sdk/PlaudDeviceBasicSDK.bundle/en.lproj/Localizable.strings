@@ -100,3 +100,29 @@
 "file_transcoding" = "Transcoding...";
 "file_download_complete" = "Download file complete";
 "file_transcode_error" = "Transcoding error"; 
+
+// Workflow Status
+"pending" = "Pending";
+"running" = "Running";
+"progress" = "In Progress";
+"success" = "Success";
+"failure" = "Failed";
+"cancelled" = "Cancelled";
+"timeout" = "Timeout";
+
+// Workflow Task Types
+"audio_transcribe" = "Audio Transcription";
+"ai_summarize" = "AI Summary";
+"ai_etl" = "AI ETL";
+"audio_merge" = "Audio Merge";
+"custom" = "Custom";
+"unknown" = "Unknown";
+
+// Workflow Errors
+"invalid_url" = "Invalid URL";
+"network_error" = "Network Error";
+"invalid_response" = "Invalid Response";
+"server_error" = "Server Error";
+"workflow_not_found" = "Workflow Not Found";
+"workflow_failed" = "Workflow Failed";
+"no_api_token" = "No API Token";

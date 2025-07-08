@@ -101,3 +101,29 @@
 "file_transcoding" = "转码中...";
 "file_download_complete" = "下载并转码完成";
 "file_transcode_error" = "转码错误"; 
+
+// Workflow Status
+"pending" = "等待中";
+"running" = "运行中";
+"progress" = "进行中";
+"success" = "成功";
+"failure" = "失败";
+"cancelled" = "已取消";
+"timeout" = "超时";
+
+// Workflow Task Types
+"audio_transcribe" = "音频转写";
+"ai_summarize" = "AI总结";
+"ai_etl" = "AI ETL";
+"audio_merge" = "音频合并";
+"custom" = "自定义";
+"unknown" = "未知";
+
+// Workflow Errors
+"invalid_url" = "无效URL";
+"network_error" = "网络错误";
+"invalid_response" = "无效响应";
+"server_error" = "服务器错误";
+"workflow_not_found" = "工作流未找到";
+"workflow_failed" = "工作流失败";
+"no_api_token" = "无API令牌";
