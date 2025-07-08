@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/FirebaseAnalytics.framework/FirebaseAnalytics</key>
 		<data>
-		wz3oSnCjx8UKswrjZdJ1M0NJq6g=
+		Ou1RuiHaaYeaFs0cEg8sw/r/5bA=
 		</data>
 		<key>Frameworks/FirebaseAnalytics.framework/Info.plist</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/PlaudDeviceBasicSDK-Swift.h</key>
 		<data>
-		aTZ4rru4IWuOL0THl1OrXDHf0G0=
+		+xybgyO9nQ4qDilR2iSd7Oy+9T0=
 		</data>
 		<key>Headers/PlaudDeviceBasicSDK.h</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		x7LOBkb3h3Pn/LcjXoAsQAf4wl4=
+		XTytDYG41lw2xcEjC/A2d8EQQdA=
 		</data>
 		<key>Modules/PlaudDeviceBasicSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		/NmV61eKHokE9e6+7uY27I166vg=
+		MLjMGINHyP9jAho+sg9wjuFzQZI=
 		</data>
 		<key>Modules/PlaudDeviceBasicSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/PlaudDeviceBasicSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		0t3rzVtqaRQrU92KMAUUML1Np6E=
+		doEkr/EXwoHb0Rp3fZgY7724Dew=
 		</data>
 		<key>Modules/PlaudDeviceBasicSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		FdETG8l9rdVkVfrAMiqN5unwnQA=
+		yc+EQgOio+YhV3dLinpTyejm4k4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>PenBleSDK.framework/Headers/PenBleSDK-Swift.h</key>
 		<data>
-		ZaXEEAi6tBW8vKeJoCi2HAOgIQc=
+		iYyguGJG9FQE5qYSZTqbINKk0WY=
 		</data>
 		<key>PenBleSDK.framework/Headers/PenBleSDK.h</key>
 		<data>
@@ -94,11 +94,11 @@
 		</data>
 		<key>PenBleSDK.framework/Info.plist</key>
 		<data>
-		oEFibsKTyIfkA53DK+1o6nIr/iA=
+		84b3tFEWHqPpj8OzejN19UThsXw=
 		</data>
 		<key>PenBleSDK.framework/Modules/PenBleSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		VPrS/tmoGHOv2nu3IEDncGejMsk=
+		4Tsr8LGV8fh8rtSE8HnTwnQzg3k=
 		</data>
 		<key>PenBleSDK.framework/Modules/PenBleSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -106,11 +106,11 @@
 		</data>
 		<key>PenBleSDK.framework/Modules/PenBleSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		07JSI1v0xOR9eQdSajiT5Ugg9QA=
+		NhZpBqHDmLNu+9Wqcz5sMoLcx/c=
 		</data>
 		<key>PenBleSDK.framework/Modules/PenBleSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		JW+Q2wU/iBi0jHFKnX1AzteFr2c=
+		SOvOCAZj4L37i/8xlNEIm2MoPDE=
 		</data>
 		<key>PenBleSDK.framework/Modules/module.modulemap</key>
 		<data>
@@ -118,11 +118,11 @@
 		</data>
 		<key>PenBleSDK.framework/PenBleSDK</key>
 		<data>
-		tb+H132KGthxsVBd6qlssItP5Pc=
+		ApuHpxgDRPVPL2epmH3xnnzeMJs=
 		</data>
 		<key>PenBleSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		vpRdQeGT8C7OWNoCCe1KhhgkYUg=
+		4OFwzRC2AcXVZ0+oI9ESktgVqrk=
 		</data>
 		<key>PlaudDeviceBasicSDK.bundle/Info.plist</key>
 		<data>
@@ -157,11 +157,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wz3oSnCjx8UKswrjZdJ1M0NJq6g=
+			Ou1RuiHaaYeaFs0cEg8sw/r/5bA=
 			</data>
 			<key>hash2</key>
 			<data>
-			S4bEhrCR/jKxVcI5TKkRRtTyE3qoYeW1fxQ+rXK8Wmw=
+			hbVrHJOuDP53ucEKnPwMphYAbKeoryvvfnuiuAKN7pE=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseAnalytics.framework/Info.plist</key>
@@ -190,11 +190,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aTZ4rru4IWuOL0THl1OrXDHf0G0=
+			+xybgyO9nQ4qDilR2iSd7Oy+9T0=
 			</data>
 			<key>hash2</key>
 			<data>
-			9u0eOwAzWmoUKfdFnkvPtnn3CpqjnRthL08i7ZI0n1k=
+			VhGmRiBVs1nzA/Jcm5oSzAEy8swxgvAyKJ2pvU+ZZi0=
 			</data>
 		</dict>
 		<key>Headers/PlaudDeviceBasicSDK.h</key>
@@ -223,11 +223,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/NmV61eKHokE9e6+7uY27I166vg=
+			MLjMGINHyP9jAho+sg9wjuFzQZI=
 			</data>
 			<key>hash2</key>
 			<data>
-			ihcqsIdVUy2v6koXmgp7b22M8YplEwftngq/mnqDcPU=
+			pi6+M5H/K5YAMOAHs/LDIe+UyM04z28t+u8gLn6WpHE=
 			</data>
 		</dict>
 		<key>Modules/PlaudDeviceBasicSDK.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -245,22 +245,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0t3rzVtqaRQrU92KMAUUML1Np6E=
+			doEkr/EXwoHb0Rp3fZgY7724Dew=
 			</data>
 			<key>hash2</key>
 			<data>
-			ocTOQBkG8jlYp6lsI9oohLueAZ+0B+Y1GYnK4O/MoRU=
+			txNFeJttpXLKnggHjyrhMjQpFl5eapzEnhWODkl7lrE=
 			</data>
 		</dict>
 		<key>Modules/PlaudDeviceBasicSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FdETG8l9rdVkVfrAMiqN5unwnQA=
+			yc+EQgOio+YhV3dLinpTyejm4k4=
 			</data>
 			<key>hash2</key>
 			<data>
-			9x90JhaJPwuDoMhrNibj+IFlOIRqtv4CZmsvY/c/QU4=
+			9mGUhzkVwp9yEm6PM8iUcnTbfWf6Q0z8JschZ9nUxFU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -344,11 +344,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZaXEEAi6tBW8vKeJoCi2HAOgIQc=
+			iYyguGJG9FQE5qYSZTqbINKk0WY=
 			</data>
 			<key>hash2</key>
 			<data>
-			Zda+nm6exvhsSDjIvAlWqZ36vkaXCRrwIb5zoiayB1M=
+			+Sq9v1L2Vhfli5rb0skhPWspb6NgjVkFlb8lg8tO/yk=
 			</data>
 		</dict>
 		<key>PenBleSDK.framework/Headers/PenBleSDK.h</key>
@@ -388,22 +388,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oEFibsKTyIfkA53DK+1o6nIr/iA=
+			84b3tFEWHqPpj8OzejN19UThsXw=
 			</data>
 			<key>hash2</key>
 			<data>
-			OjJXKgXy82CDCYZud4gegr5/m4MWeBFj/WcdQshe7lU=
+			xJjtAXBDzPWB6XsbW9reCf2GIG4bgk06SBWddBTgJeM=
 			</data>
 		</dict>
 		<key>PenBleSDK.framework/Modules/PenBleSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VPrS/tmoGHOv2nu3IEDncGejMsk=
+			4Tsr8LGV8fh8rtSE8HnTwnQzg3k=
 			</data>
 			<key>hash2</key>
 			<data>
-			cqlYGyCGDNwZuxthP3qfPIl20Bols7CElcfx/72+dzg=
+			rCH4kFdoXPMh6792jr4ovuxdD2blZrpK26hYfyxXhUY=
 			</data>
 		</dict>
 		<key>PenBleSDK.framework/Modules/PenBleSDK.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -421,22 +421,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			07JSI1v0xOR9eQdSajiT5Ugg9QA=
+			NhZpBqHDmLNu+9Wqcz5sMoLcx/c=
 			</data>
 			<key>hash2</key>
 			<data>
-			MAWr4jGyJwcdSh2L3aj7sI31yeUl3eWm9y3pxB3Hj7o=
+			2iiRGygsLv55H+67zytjs4/8cDzrjJfsM4ltfzdV47Q=
 			</data>
 		</dict>
 		<key>PenBleSDK.framework/Modules/PenBleSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JW+Q2wU/iBi0jHFKnX1AzteFr2c=
+			SOvOCAZj4L37i/8xlNEIm2MoPDE=
 			</data>
 			<key>hash2</key>
 			<data>
-			qwCHLo5cdKmtssaVmFm+X6C9jGsZ2MeRU79f6LfhqeE=
+			vgDUBPLpRj/uUsxnCxF96AyybZwadc+Bz2Am7+5bSiI=
 			</data>
 		</dict>
 		<key>PenBleSDK.framework/Modules/module.modulemap</key>
@@ -454,22 +454,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tb+H132KGthxsVBd6qlssItP5Pc=
+			ApuHpxgDRPVPL2epmH3xnnzeMJs=
 			</data>
 			<key>hash2</key>
 			<data>
-			lpxD/SiAMUv0o1aFNvJfX0M2Y+iOxdh0HJabA0RHKkA=
+			53q+cOjTxbF2gxYUiH63mGwZXwsTU0aXFpNL0QNS/C8=
 			</data>
 		</dict>
 		<key>PenBleSDK.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vpRdQeGT8C7OWNoCCe1KhhgkYUg=
+			4OFwzRC2AcXVZ0+oI9ESktgVqrk=
 			</data>
 			<key>hash2</key>
 			<data>
-			8gAs4YuNRjVQfuWrfg7YNyDmkzrbhzhx9h8XIb91g6E=
+			wHluo7Gz6Ox+n5YYVEDVbDJ2A/H/3ECRC65h3bCL6+g=
 			</data>
 		</dict>
 		<key>PlaudDeviceBasicSDK.bundle/Info.plist</key>
