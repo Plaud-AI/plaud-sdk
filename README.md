@@ -96,6 +96,9 @@ Check out our example applications:
 - [iOS Demo App](https://github.com/Plaud-AI/plaud-sdk/tree/main/examples/ios-demo)
 - [Android Demo App](https://github.com/Plaud-AI/plaud-sdk/tree/main/examples/android-demo)
 
+## Install app
+- [android App](https://github.com/Plaud-AI/plaud-sdk/blob/main/packages/android/plaud-sdk-showcase.apk)
+
 ## FAQ
 
 ### What audio formats are supported?
