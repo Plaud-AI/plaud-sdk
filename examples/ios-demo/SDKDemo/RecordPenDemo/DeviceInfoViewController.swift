@@ -420,7 +420,7 @@ import UIKit
         deviceAgent.getFileList(startSessionId: 0)
     }
 
-    @objc private func goWifiSettingPage(button _: UIButton) {
+    @objc private func     goWifiSettingPage(button _: UIButton) {
         let vc = PlaudWifiSettingPage()
         navigationController?.pushViewController(vc, animated: true)
     }
