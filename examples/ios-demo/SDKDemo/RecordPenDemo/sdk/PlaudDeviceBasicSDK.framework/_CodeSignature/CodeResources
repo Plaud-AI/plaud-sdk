@@ -6,7 +6,7 @@
 	<dict>
 		<key>Frameworks/FirebaseAnalytics.framework/FirebaseAnalytics</key>
 		<data>
-		Ou1RuiHaaYeaFs0cEg8sw/r/5bA=
+		YhwE9rHocgTU4P0s7DmhkiVW6s0=
 		</data>
 		<key>Frameworks/FirebaseAnalytics.framework/Info.plist</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/PlaudDeviceBasicSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		MLjMGINHyP9jAho+sg9wjuFzQZI=
+		pxu5yWGjEJD/XYCnJLrFH1OLIeI=
 		</data>
 		<key>Modules/PlaudDeviceBasicSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/PlaudDeviceBasicSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		yc+EQgOio+YhV3dLinpTyejm4k4=
+		mxX1orGIztCmBWRjrUVY/x3b1MY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>PenBleSDK.framework/PenBleSDK</key>
 		<data>
-		ApuHpxgDRPVPL2epmH3xnnzeMJs=
+		uZw4D6iTJBAu4zjB9qvW4oeApbg=
 		</data>
 		<key>PenBleSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -157,11 +157,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Ou1RuiHaaYeaFs0cEg8sw/r/5bA=
+			YhwE9rHocgTU4P0s7DmhkiVW6s0=
 			</data>
 			<key>hash2</key>
 			<data>
-			hbVrHJOuDP53ucEKnPwMphYAbKeoryvvfnuiuAKN7pE=
+			Yz0mxfstbFM271blCX+F08xNcXJDztxHd2o4TwS0Yy8=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseAnalytics.framework/Info.plist</key>
@@ -223,11 +223,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MLjMGINHyP9jAho+sg9wjuFzQZI=
+			pxu5yWGjEJD/XYCnJLrFH1OLIeI=
 			</data>
 			<key>hash2</key>
 			<data>
-			pi6+M5H/K5YAMOAHs/LDIe+UyM04z28t+u8gLn6WpHE=
+			BbmDbZ8ZRpxe9jVL8g4TUEmkoW5r+jWXHsGL598yWtY=
 			</data>
 		</dict>
 		<key>Modules/PlaudDeviceBasicSDK.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -256,11 +256,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yc+EQgOio+YhV3dLinpTyejm4k4=
+			mxX1orGIztCmBWRjrUVY/x3b1MY=
 			</data>
 			<key>hash2</key>
 			<data>
-			9mGUhzkVwp9yEm6PM8iUcnTbfWf6Q0z8JschZ9nUxFU=
+			YTbKqYItNNuG50GqNpEVqiEGdl6i50Snz6qJhImcrzU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -454,11 +454,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ApuHpxgDRPVPL2epmH3xnnzeMJs=
+			uZw4D6iTJBAu4zjB9qvW4oeApbg=
 			</data>
 			<key>hash2</key>
 			<data>
-			53q+cOjTxbF2gxYUiH63mGwZXwsTU0aXFpNL0QNS/C8=
+			MJ1Zl13jnUVOYPw9wl5aiSPDiZHCMjoyoDctTXvpldI=
 			</data>
 		</dict>
 		<key>PenBleSDK.framework/_CodeSignature/CodeResources</key>
