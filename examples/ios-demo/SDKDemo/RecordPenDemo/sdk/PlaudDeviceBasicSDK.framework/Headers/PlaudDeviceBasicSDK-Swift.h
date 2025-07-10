@@ -330,7 +330,7 @@ SWIFT_CLASS("_TtC19PlaudDeviceBasicSDK30PlaudAudioPlayerViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
-SWIFT_CLASS("_TtC19PlaudDeviceBasicSDK14PlaudBleDevice")
+SWIFT_RESILIENT_CLASS("_TtC19PlaudDeviceBasicSDK14PlaudBleDevice")
 @interface PlaudBleDevice : BleDevice
 - (nonnull instancetype)initWithSn:(NSString * _Nonnull)sn OBJC_DESIGNATED_INITIALIZER;
 @end
