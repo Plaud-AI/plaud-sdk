@@ -12,8 +12,66 @@ import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-extension Swift.Array {
-  public mutating func appendDistinct<S>(contentsOf newElements: S, where condition: @escaping (Element, Element) -> Swift.Bool) where Element == S.Element, S : Swift.Sequence
+@_hasMissingDesignatedInitializers public class PlaudDomainManager {
+  public enum Region : Swift.String, Swift.CaseIterable {
+    case cn
+    case us
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [PlaudDeviceBasicSDK.PlaudDomainManager.Region]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [PlaudDeviceBasicSDK.PlaudDomainManager.Region] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public static let shared: PlaudDeviceBasicSDK.PlaudDomainManager
+  @objc deinit
+  public func setAutoLanguageAssociation(_ enabled: Swift.Bool)
+  public func isAutoLanguageAssociationEnabled() -> Swift.Bool
+  public func setRegion(_ region: PlaudDeviceBasicSDK.PlaudDomainManager.Region)
+  public func setRegionForLanguage(_ languageCode: Swift.String)
+  public func getCurrentRegion() -> PlaudDeviceBasicSDK.PlaudDomainManager.Region
+  public func getCurrentDomain() -> Swift.String
+  public func getCurrentBaseURL() -> Swift.String
+  public func getDomain(for region: PlaudDeviceBasicSDK.PlaudDomainManager.Region) -> Swift.String
+  public func getBaseURL(for region: PlaudDeviceBasicSDK.PlaudDomainManager.Region) -> Swift.String
+  public func buildAPIURL(path: Swift.String) -> Swift.String
+  public func buildAPIURL(path: Swift.String, for region: PlaudDeviceBasicSDK.PlaudDomainManager.Region) -> Swift.String
+  public func buildAPIURL(path: Swift.String, for languageCode: Swift.String) -> Swift.String
+  public func getRegionForCurrentLanguage() -> PlaudDeviceBasicSDK.PlaudDomainManager.Region
+  public func getCurrentLanguageCode() -> Swift.String
+}
+public struct PlaudWifiInfo {
+  public init(name: Swift.String, password: Swift.String, isConnected: Swift.Bool, index: Swift.UInt32 = 0)
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency public class PlaudWifiSettingPage : UIKit.UIViewController, PlaudDeviceBasicSDK.PlaudDeviceAgentProtocol {
+  @_Concurrency.MainActor @preconcurrency public static func resetTempTestWifiIndex()
+  @_Concurrency.MainActor @preconcurrency @objc public func bleAppKeyState(result _: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc public func onWifiSyncUrl(url: Swift.String)
+  @_Concurrency.MainActor @preconcurrency @objc public func blePenState(state _: Swift.Int, privacy _: Swift.Int, keyState _: Swift.Int, uDisk _: Swift.Int, findMyToken _: Swift.Int, hasSndpKey _: Swift.Int, deviceAccessToken _: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc public func bleConnectState(state: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc public func onWifiSyncEnabled(_ value: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc public func onWifiSyncListReceived(list: [Swift.UInt32])
+  @_Concurrency.MainActor @preconcurrency @objc public func onWifiSyncConfigReceived(index: Swift.UInt32, ssid: Swift.String, password: Swift.String)
+  @_Concurrency.MainActor @preconcurrency @objc public func onWifiSyncConfigSet(result: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc public func onWifiSyncDeleteResult(result _: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc public func onWifiSyncTestResult(index: Swift.UInt32, result: Swift.Int, rawCode _: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency public func getWifiTestTips(result: Swift.Int) -> Swift.String
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change _: [Foundation.NSKeyValueChangeKey : Any]?, context _: Swift.UnsafeMutableRawPointer?)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency public func updateWifiListVisibility()
+  @_Concurrency.MainActor @preconcurrency public static func testWifiConnection(ssid: Swift.String, password: Swift.String, wifiIndex: Swift.UInt32?, edit: Swift.Bool, completion: @escaping (Swift.Bool, Swift.String) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension PlaudDeviceBasicSDK.PlaudWifiSettingPage : UIKit.UITableViewDataSource, UIKit.UITableViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_: UIKit.UITableView, numberOfRowsInSection _: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_: UIKit.UITableView, heightForRowAt _: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
 }
 public enum SoundCategory {
   case ambient
@@ -97,200 +155,226 @@ public protocol Session : AnyObject {
 }
 extension AVFAudio.AVAudioSession : PlaudDeviceBasicSDK.Session {
 }
-public struct WorkflowResultResponse : Swift.Codable {
-  public let id: Swift.String
-  public let status: Swift.String
-  public let ownerId: Swift.String?
-  public let metadataJson: [Swift.String : PlaudDeviceBasicSDK.AnyCodable]?
-  public let fileId: Swift.String?
-  public let tasks: [PlaudDeviceBasicSDK.WorkflowTaskResult]
-  public let metadata: [Swift.String : PlaudDeviceBasicSDK.AnyCodable]?
-  public let results: [Swift.String : PlaudDeviceBasicSDK.AnyCodable]?
-  public let taskResults: [Swift.String : PlaudDeviceBasicSDK.AnyCodable]?
-  public let completedAt: Swift.String?
-  public let duration: Swift.Double?
-  public let message: Swift.String?
-  public let progress: Swift.Double?
-  public let estimatedCompletionTime: Swift.String?
-  public let taskStatuses: [Swift.String : Swift.String]?
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
-  public var legacyResults: [Swift.String : Any]? {
-    get
+@_inheritsConvenienceInitializers @objc public class PlaudBleDevice : PenBleSDK.BleDevice {
+  @objc override public init(sn: Swift.String)
+  override public init(peripheral: PenBleSDK.CBPeripheral, rssi: Foundation.NSNumber, manufacturerData: Foundation.Data, localName: Swift.String?)
+  @objc deinit
+}
+@objc public protocol PlaudDeviceAgentProtocol {
+  @objc func bleAppKeyState(result: Swift.Int)
+  @objc func blePenState(state: Swift.Int, privacy: Swift.Int, keyState: Swift.Int, uDisk: Swift.Int, findMyToken: Swift.Int, hasSndpKey: Swift.Int, deviceAccessToken: Swift.Int)
+  @objc optional func bleScanResult(bleDevices: [PenBleSDK.BleDevice])
+  @objc optional func bleScanOverTime()
+  @objc optional func bleConnectState(state: Swift.Int)
+  @objc optional func bleBind(sn: Swift.String?, status: Swift.Int, protVersion: Swift.Int, timezone: Swift.Int)
+  @objc optional func bleMicGain(_ value: Swift.Int)
+  @objc optional func bleStorage(total: Swift.Int, free: Swift.Int, duration: Swift.Int)
+  @objc optional func blePowerChange(power: Swift.Int, oldPower: Swift.Int)
+  @objc optional func bleChargingState(isCharging: Swift.Bool, level: Swift.Int)
+  @objc optional func bleFileList(bleFiles: [PenBleSDK.BleFile])
+  @objc optional func bleRecordStart(sessionId: Swift.Int, start: Swift.Int, status: Swift.Int, scene: Swift.Int, startTime: Swift.Int)
+  @objc optional func bleRecordStop(sessionId: Swift.Int, reason: Swift.Int, fileExist: Swift.Bool, fileSize: Swift.Int)
+  @objc optional func bleRecordPause(sessionId: Swift.Int, reason: Swift.Int, fileExist: Swift.Bool, fileSize: Swift.Int)
+  @objc optional func bleRecordResume(sessionId: Swift.Int, start: Swift.Int, status: Swift.Int, scene: Swift.Int, startTime: Swift.Int)
+  @objc optional func bleSyncFileHead(sessionId: Swift.Int, status: Swift.Int)
+  @objc optional func bleSyncFileTail(sessionId: Swift.Int, crc: Swift.Int)
+  @objc optional func bleData(sessionId: Swift.Int, start: Swift.Int, data: Foundation.Data)
+  @objc optional func blePcmData(sessionId: Swift.Int, millsec: Swift.Int, pcmData: Foundation.Data, isMusic: Swift.Bool)
+  @objc optional func bleDataComplete()
+  @objc optional func bleDecodeFail(start: Swift.Int)
+  @objc optional func bleSyncFileStop()
+  @objc optional func bleDownloadFile(sessionId: Swift.Int, outputPath: Swift.String, status: Swift.Int, progress: Swift.Int, tips: Swift.String)
+  @objc optional func bleDownloadFileStop()
+  @objc optional func bleDeleteFile(sessionId: Swift.Int, status: Swift.Int)
+  @objc optional func bleDepair(_ status: Swift.Int)
+  @objc optional func onWifiSyncConfigReceived(index: Swift.UInt32, ssid: Swift.String, password: Swift.String)
+  @objc optional func onWifiSyncConfigSet(result: Swift.Int)
+  @objc optional func onWifiSyncListReceived(list: [Swift.UInt32])
+  @objc optional func onWifiSyncDeleteResult(result: Swift.Int)
+  @objc optional func onWifiSyncTestStarted(index: Swift.UInt32)
+  @objc optional func onWifiSyncWillStart(seconds: Swift.Int)
+  @objc optional func onWifiSyncTestResult(index: Swift.UInt32, result: Swift.Int, rawCode: Swift.Int)
+  @objc optional func onWifiSyncUrl(url: Swift.String)
+  @objc optional func onSdkCheckPermissionResult(pass: Swift.Bool, tips: Swift.String)
+  @objc optional func onSdkCheckResourceResult(pass: Swift.Bool, tips: Swift.String)
+  @objc optional func onWifiSyncEnabled(_ value: Swift.Int)
+  @objc optional func onCommonMsgChannel(type: Swift.Int, value: Swift.Int, tips: Swift.String)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class PlaudDeviceAgent : ObjectiveC.NSObject {
+  @objc public static let shared: PlaudDeviceBasicSDK.PlaudDeviceAgent
+  public var bleAgent: PenBleSDK.BleAgent?
+  @objc weak public var delegate: (any PlaudDeviceBasicSDK.PlaudDeviceAgentProtocol)? {
+    @objc get
+    @objc set
   }
-  public var legacyTaskResults: [Swift.String : Any]? {
-    get
-  }
-  public var legacyCompletedAt: Swift.String? {
-    get
-  }
-  public var legacyDuration: Foundation.TimeInterval? {
-    get
-  }
-  public var legacyProgress: Swift.Double? {
-    get
-  }
-  public var legacyMessage: Swift.String? {
-    get
-  }
-  public var legacyEstimatedCompletionTime: Swift.String? {
-    get
-  }
-  public var legacyTaskStatuses: [Swift.String : Swift.String]? {
-    get
-  }
-  public var firstTranscriptResult: PlaudDeviceBasicSDK.TranscriptResult? {
-    get
-  }
-  public var firstAIEtlResult: PlaudDeviceBasicSDK.AIEtlResult? {
-    get
-  }
-  public var firstAISummaryResult: PlaudDeviceBasicSDK.AISummaryResult? {
-    get
-  }
-  public var allTranscriptText: Swift.String {
-    get
-  }
-  public var transcriptBySpeaker: [Swift.String : Swift.String] {
-    get
-  }
-  public var transcriptTask: PlaudDeviceBasicSDK.WorkflowTaskResult? {
-    get
-  }
-  public var aiEtlTask: PlaudDeviceBasicSDK.WorkflowTaskResult? {
-    get
-  }
-  public var aiSummaryTask: PlaudDeviceBasicSDK.WorkflowTaskResult? {
-    get
-  }
-  public var transcriptDuration: Swift.Int64? {
-    get
-  }
-  public var aiEtlDuration: Swift.Int64? {
-    get
-  }
-  public var aiSummaryDurationSeconds: Swift.Double? {
-    get
-  }
-  public var transcriptDurationSeconds: Swift.Double? {
-    get
-  }
-  public var aiEtlDurationSeconds: Swift.Double? {
-    get
-  }
-  public var isSuccess: Swift.Bool {
-    get
-  }
-  public var segmentCount: Swift.Int {
-    get
-  }
-  public var allSpeakers: [Swift.String] {
-    get
-  }
-  public var speakers: [Swift.String] {
-    get
-  }
-  public var transcriptTotalDuration: Foundation.TimeInterval {
-    get
-  }
-  public var aiEtlSummary: Swift.String? {
-    get
-  }
-  public var aiSummaryText: Swift.String? {
-    get
-  }
-  public var aiSummaryKeyPoints: [Swift.String]? {
-    get
-  }
-  public var aiSummaryActionItems: [Swift.String]? {
-    get
-  }
-  public var aiSummaryParticipants: [Swift.String]? {
-    get
-  }
-  public var aiSummaryTemplate: Swift.String? {
-    get
-  }
-  public var aiSummaryModel: Swift.String? {
-    get
-  }
-  public var aiSummaryDuration: Swift.String? {
-    get
-  }
-  public var aiSummaryHeadline: Swift.String? {
-    get
-  }
-  public var aiSummaryTopics: [PlaudDeviceBasicSDK.AISummaryTopic]? {
-    get
-  }
-  public var clinicalReport: Swift.String? {
-    get
-  }
-  public var dealStatus: Swift.String? {
-    get
-  }
-  public var dealIntentionRating: Swift.String? {
-    get
-  }
-  public var communicationHighlight: Swift.String? {
-    get
-  }
-  public var communicationSuggestion: Swift.String? {
-    get
-  }
-  public var customerAppellation: Swift.String? {
-    get
-  }
-  public var hasAIEtlTask: Swift.Bool {
-    get
-  }
-  public var hasAISummaryTask: Swift.Bool {
-    get
-  }
-  public var hasTranscriptTask: Swift.Bool {
-    get
-  }
-  public var taskTypes: [Swift.String] {
-    get
-  }
-  public var embeddingsData: [Swift.String : [Swift.Double]]? {
-    get
-  }
-  public var hasEmbeddings: Swift.Bool {
-    get
-  }
-  public var transcriptStatusCode: Swift.Int? {
+  @objc public func initSDK(hostName: Swift.String, appKey: Swift.String, appSecret: Swift.String, bindToken: Swift.String, extra: [Swift.String : Swift.String] = [:])
+  @objc public static func getTestAppKey() -> Swift.String
+  @objc public static func getTestAppSecret() -> Swift.String
+  @objc public func depair(clear: Swift.Bool = false)
+  @objc public func setDeviceBinding(token: Swift.String)
+  @objc public func startScan()
+  @objc public func stopScan()
+  @objc public func connectBleDevice(bleDevice: PenBleSDK.BleDevice)
+  @objc public func disconnect()
+  @objc public func tryReconnectLastDevice()
+  @objc public func getState()
+  @objc public func getStorage()
+  @objc public func getWifiSyncEnable()
+  @objc public func setWifiSyncEnable(value: Swift.Int)
+  @objc public func setWifiSyncDomain(domain: Swift.String)
+  @objc public func getWifiSyncUrl()
+  @objc public func setWifiSyncTest(wifiIndex: Swift.UInt32)
+  @objc public func getWifiSyncTestResult(wifiIndex: Swift.UInt32)
+  @objc public func getChargingState()
+  @objc public func setMicGain(value: Swift.Int)
+  @objc public func readMicGain()
+  @objc public func setUDiskMode(onOff: Swift.Bool)
+  @objc public func checkIsRecording() -> Swift.Bool
+  @objc public func startRecord()
+  @objc public func stopRecord()
+  @objc public func getCurrentSessionID() -> Swift.Int
+  @objc public func pauseRecord()
+  @objc public func resumeRecord()
+  @objc public func getFileList(startSessionId: Swift.Int)
+  @objc public func getFile(sessionId: Swift.Int)
+  @objc public func syncFile(sessionId: Swift.Int, start: Swift.Int, end: Swift.Int)
+  @objc public func downloadFile(sessionId: Swift.Int, outputPath: Swift.String)
+  @objc public func stopDownloadFile()
+  @objc public func stopSyncFile()
+  @objc public func deleteFile(sessionId: Swift.Int)
+  @objc public func clearAllFiles()
+  @objc public func restoreFactory()
+  @objc public func getWifiSyncConfig(wifiIndex: Swift.UInt32)
+  @objc public func setWifiSyncConfig(operation: Swift.Int, wifiIndex: Swift.UInt32, ssid: Swift.String, password: Swift.String)
+  @objc public func getWifiSyncList()
+  @objc public func deleteWifiSyncConfig(wifiIndices: [Swift.UInt32])
+  @objc deinit
+}
+extension PlaudDeviceBasicSDK.PlaudDeviceAgent : PenBleSDK.BleAgentProtocol {
+  @objc dynamic public func bleScanResult(bleDevices: [PenBleSDK.BleDevice])
+  @objc dynamic public func bleScanOverTime()
+  @objc dynamic public func bleAppKeyState(result: Swift.Int)
+  @objc dynamic public func bleConnectState(state: Swift.Int)
+  @objc dynamic public func bleBind(sn: Swift.String?, status: Swift.Int, protVersion: Swift.Int, timezone: Swift.Int)
+  @objc dynamic public func blePenState(state: Swift.Int, privacy: Swift.Int, keyState: Swift.Int, uDisk: Swift.Int, findMyToken: Swift.Int, hasSndpKey: Swift.Int, deviceAccessToken: Swift.Int)
+  @objc dynamic public func bleStorage(total: Swift.Int, free: Swift.Int, duration: Swift.Int)
+  @objc dynamic public func blePowerChange(power: Swift.Int, oldPower: Swift.Int)
+  @objc dynamic public func bleChargingState(isCharging: Swift.Bool, level: Swift.Int)
+  @objc dynamic public func bleFileList(bleFiles: [PenBleSDK.BleFile])
+  @objc dynamic public func bleDataComplete()
+  @objc dynamic public func bleRecordStart(sessionId: Swift.Int, start: Swift.Int, status: Swift.Int, scene: Swift.Int, startTime: Swift.Int)
+  @objc dynamic public func bleRecordStop(sessionId: Swift.Int, reason: Swift.Int, fileExist: Swift.Bool, fileSize: Swift.Int)
+  @objc dynamic public func bleRecordPause(sessionId: Swift.Int, reason: Swift.Int, fileExist: Swift.Bool, fileSize: Swift.Int)
+  @objc dynamic public func bleRecordResume(sessionId: Swift.Int, start: Swift.Int, status: Swift.Int, scene: Swift.Int, startTime: Swift.Int)
+  @objc dynamic public func bleSyncFileHead(sessionId: Swift.Int, status: Swift.Int)
+  @objc dynamic public func bleSyncFileTail(sessionId: Swift.Int, crc: Swift.Int)
+  @objc dynamic public func bleData(sessionId: Swift.Int, start: Swift.Int, data: Foundation.Data)
+  @objc dynamic public func blePcmData(sessionId: Swift.Int, millsec: Swift.Int, pcmData: Foundation.Data, isMusic: Swift.Bool)
+  @objc dynamic public func bleDecodeFail(start: Swift.Int)
+  @objc dynamic public func bleSyncFileStop()
+  @objc dynamic public func bleDeleteFile(sessionId: Swift.Int, status: Swift.Int)
+  @objc dynamic public func bleDepair(_ status: Swift.Int)
+  @objc dynamic public func bleMicGain(_ value: Swift.Int)
+  @objc dynamic public func onSyncIdleWifiConfigReceived(index: Swift.UInt32, ssid: Swift.String, password: Swift.String)
+  @objc dynamic public func onSyncIdleWifiConfigSet(result: Swift.Int)
+  @objc dynamic public func onSyncIdleWifiListReceived(list: [Swift.UInt32])
+  @objc dynamic public func onSyncIdleWifiDeleteResult(result: Swift.Int)
+  @objc dynamic public func onSyncIdleWifiTestStarted(index: Swift.UInt32)
+  @objc dynamic public func onSyncIdleWillStart(seconds: Swift.Int)
+  @objc dynamic public func onSyncIdleWifiTestResult(index: Swift.UInt32, result: Swift.Int, rawCode: Swift.Int)
+  @objc dynamic public func bleSyncWhenIdleEnabled(_ value: Swift.Int)
+  @objc dynamic public func bleUDiskErr(funcName: Swift.String)
+  @objc dynamic public func bleUpdatePowerLowErr()
+  @objc dynamic public func bleDeviceDisconnectErr()
+  @objc dynamic public func bleState(powered: Swift.Bool)
+  @objc dynamic public func bleHandshakeWait(timeout: Swift.Int)
+  @objc dynamic public func bleDeviceName(name: Swift.String?)
+  @objc dynamic public func blePenTime(stamp: Swift.Int, timezone: Swift.Int, zoneMin: Swift.Int)
+  @objc dynamic public func blePasswordReset(password: Swift.Int)
+  @objc dynamic public func bleBacklightDuration(_ duration: Swift.Int)
+  @objc dynamic public func bleBacklightBright(_ bright: Swift.Int)
+  @objc dynamic public func bleLanguage(_ type: Swift.Int)
+  @objc dynamic public func bleRecScene(_ scene: Swift.Int)
+  @objc dynamic public func bleRecMode(_ mode: Swift.Int)
+  @objc dynamic public func bleVadSensitivity(_ value: Swift.Int)
+  @objc dynamic public func bleVpuGain(_ value: Swift.Int)
+  @objc dynamic public func bleSwitchHandler(_ id: Swift.Int)
+  @objc dynamic public func bleAutoPowerOff(_ value: Swift.Int)
+  @objc dynamic public func bleRawWaveEnabled(_ value: Swift.Int)
+  @objc dynamic public func bleRecordingAfterDisConnetEnabled(_ value: Swift.Int)
+  @objc dynamic public func bleFindMyState(_ value: Swift.Int)
+  @objc dynamic public func bleVPUCLKState(_ value: Swift.Int)
+  @objc dynamic public func bleStopRecordingAfterCharging(_ value: Swift.Int)
+  @objc dynamic public func bleAutoClear(_ open: Swift.Bool)
+  @objc dynamic public func bleVad(_ open: Swift.Bool)
+  @objc dynamic public func bleWiFiOpen(_ status: Swift.Int, _ wifiName: Swift.String, _ wholeName: Swift.String, _ wifiPass: Swift.String)
+  @objc dynamic public func bleWiFiClose(_ status: Swift.Int)
+  @objc dynamic public func bleSetWiFiSsid(status: Swift.Int)
+  @objc dynamic public func bleGetWiFiSsid(status: Swift.Int, ssid: Swift.String?)
+  @objc dynamic public func bleVoiceAbnormal(status: Swift.Int)
+  @objc dynamic public func bleWebsocketProfile(_ type: Swift.Int, _ conent: Swift.String?)
+  @objc dynamic public func bleWebsocketTest(_ status: Swift.Int)
+  @objc dynamic public func bleLedState(onOff: Swift.Int)
+  @objc dynamic public func bleSetLedState(onOff: Swift.Int)
+  @objc dynamic public func bleMarking(sessionId: Swift.Int, status: Swift.Int, markList: [Swift.UInt32])
+  @objc dynamic public func bleAngles(pitchAngle: Swift.Float, rollbackAngle: Swift.Float, yawAngle: Swift.Float)
+  @objc dynamic public func bleFotaResult(uid: Swift.Int, status: Swift.Int, errmsg: Swift.String?)
+  @objc dynamic public func bleFotaPackReq(uid: Swift.Int, start: Swift.Int, end: Swift.Int)
+  @objc dynamic public func bleFotaPackFin(uid: Swift.Int, status: Swift.Int, errmsg: Swift.String?)
+  @objc dynamic public func bleOtaDataSendFail()
+  @objc dynamic public func bleRate(lossRate: Swift.Double, rate: Swift.Int, instantRate: Swift.Int)
+  @objc dynamic public func blePrivacy(privacy: Swift.Int)
+  @objc dynamic public func bleClearAllFile(status: Swift.Int)
+  @objc dynamic public func bleAlarmRec(start: Swift.Int, duration: Swift.Int, repeatMode: Swift.Int)
+  @objc dynamic public func bleSetActive(status: Swift.Int)
+  @objc dynamic public func onResetFindmyResult(result: Swift.Int)
+  @objc dynamic public func onSetSoundPlusTokenResult(licenseKey: Swift.String)
+  @objc dynamic public func onGetSDFlashCIDResult(cid: Swift.String)
+}
+extension PlaudDeviceBasicSDK.PlaudDeviceAgent {
+  public func checkSdkResource()
+}
+extension UIKit.UIColor {
+  convenience public init(hex: Swift.UInt32)
+}
+@_hasMissingDesignatedInitializers public class PlaudFileUploader {
+  public static let shared: PlaudDeviceBasicSDK.PlaudFileUploader
+  public var device: PenBleSDK.BleDevice?
+  public func uploadRecording(sn: Swift.String, sessionId: Swift.Int, onProgress: @escaping (Swift.Double) -> Swift.Void, completion: @escaping (Swift.Result<[Swift.String : Any], any Swift.Error>) -> Swift.Void)
+  public func bindDevice(ownerId: Swift.String, sn: Swift.String, completion: @escaping (Swift.Result<[Swift.String : Any], any Swift.Error>) -> Swift.Void)
+  public func unbindDevice(ownerId: Swift.String, sn: Swift.String, completion: @escaping (Swift.Result<[Swift.String : Any], any Swift.Error>) -> Swift.Void)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class PlaudWifiAddingPage : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public var completion: ((PlaudDeviceBasicSDK.PlaudWifiInfo?) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public init(isEditing: Swift.Bool = true)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency public func setWifiInfo(name: Swift.String, password: Swift.String = "", wifiIndex: Swift.UInt32?, isConnected: Swift.Bool = false)
+  @objc deinit
+}
+public enum Model : Swift.String {
+  case simulator, iPod1, iPod2, iPod3, iPod4, iPod5, iPod6, iPod7, iPad2, iPad3, iPad4, iPadAir, iPadAir2, iPadAir3, iPadAir4, iPadAir5, iPad5, iPad6, iPad7, iPad8, iPad9, iPadMini, iPadMini2, iPadMini3, iPadMini4, iPadMini5, iPadMini6, iPadPro9_7, iPadPro10_5, iPadPro11, iPadPro2_11, iPadPro3_11, iPadPro12_9, iPadPro2_12_9, iPadPro3_12_9, iPadPro4_12_9, iPadPro5_12_9, iPhone4, iPhone4S, iPhone5, iPhone5S, iPhone5C, iPhone6, iPhone6Plus, iPhone6S, iPhone6SPlus, iPhoneSE, iPhone7, iPhone7Plus, iPhone8, iPhone8Plus, iPhoneX, iPhoneXS, iPhoneXSMax, iPhoneXR, iPhone11, iPhone11Pro, iPhone11ProMax, iPhoneSE2, iPhone12Mini, iPhone12, iPhone12Pro, iPhone12ProMax, iPhone13Mini, iPhone13, iPhone13Pro, iPhone13ProMax, iPhoneSE3, iPhone14, iPhone14Plus, iPhone14Pro, iPhone14ProMax, AppleWatch1, AppleWatchS1, AppleWatchS2, AppleWatchS3, AppleWatchS4, AppleWatchS5, AppleWatchSE, AppleWatchS6, AppleWatchS7, AppleTV1, AppleTV2, AppleTV3, AppleTV4, AppleTV_4K, AppleTV2_4K, unrecognized
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
     get
   }
 }
-public struct WorkflowTaskResult : Swift.Codable {
-  public let taskId: Swift.String
-  public let taskType: Swift.String
-  public let status: Swift.String
-  public let startTime: Swift.Int64?
-  public let endTime: Swift.Int64?
-  public let result: PlaudDeviceBasicSDK.AnyCodable?
-  public init(taskId: Swift.String, taskType: Swift.String, status: Swift.String, startTime: Swift.Int64?, endTime: Swift.Int64?, result: PlaudDeviceBasicSDK.AnyCodable?)
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
-  public func debugPrintTaskResult()
-  public var transcriptResult: PlaudDeviceBasicSDK.TranscriptResult? {
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor @preconcurrency public var type: PlaudDeviceBasicSDK.Model {
     get
   }
-  public var aiEtlResult: PlaudDeviceBasicSDK.AIEtlResult? {
-    get
-  }
-  public var aiSummaryResult: PlaudDeviceBasicSDK.AISummaryResult? {
-    get
-  }
+  @_Concurrency.MainActor @preconcurrency public static func getOSInfo() -> Swift.String
 }
-public enum WorkflowParsingError : Swift.Error, Foundation.LocalizedError {
-  case missingRequiredField(Swift.String)
-  case invalidDataStructure(Swift.String)
-  case unsupportedFormat(Swift.String)
-  public var errorDescription: Swift.String? {
-    get
-  }
+@_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class PlaudAudioPlayerViewController : UIKit.UIViewController, AVFAudio.AVAudioPlayerDelegate {
+  @objc @_Concurrency.MainActor @preconcurrency public init(filePath: Swift.String)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc public func audioPlayerDidFinishPlaying(_: AVFAudio.AVAudioPlayer, successfully flag: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc public func audioPlayerDecodeErrorDidOccur(_: AVFAudio.AVAudioPlayer, error: (any Swift.Error)?)
+  @_Concurrency.MainActor @preconcurrency @objc public func audioPlayerBeginInterruption(_: AVFAudio.AVAudioPlayer)
+  @_Concurrency.MainActor @preconcurrency @objc public func audioPlayerEndInterruption(_: AVFAudio.AVAudioPlayer, withOptions _: Swift.Int)
+  @objc deinit
 }
 public enum WorkflowStatus : Swift.String, Swift.Codable {
   case pending
@@ -684,42 +768,19 @@ extension PlaudDeviceBasicSDK.PlaudWorkflowManager {
   public func doAudioMergeWorkflow(fileIdList: [Swift.String], groupId: Swift.String, timeout: Foundation.TimeInterval = 3600.0, progressHandler: ((PlaudDeviceBasicSDK.WorkflowStatusResponse) -> Swift.Void)? = nil, completion: @escaping (PlaudDeviceBasicSDK.WorkflowResult<PlaudDeviceBasicSDK.WorkflowResultResponse>) -> Swift.Void)
   public func doMergeAndAnalysisWorkflow(fileIdList: [Swift.String], groupId: Swift.String, etlType: Swift.String, timeout: Foundation.TimeInterval = 3600.0, progressHandler: ((PlaudDeviceBasicSDK.WorkflowStatusResponse) -> Swift.Void)? = nil, completion: @escaping (PlaudDeviceBasicSDK.WorkflowResult<PlaudDeviceBasicSDK.WorkflowResultResponse>) -> Swift.Void)
 }
-@_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class PlaudWifiAddingPage : UIKit.UIViewController {
-  @_Concurrency.MainActor @preconcurrency public var completion: ((PlaudDeviceBasicSDK.PlaudWifiInfo?) -> Swift.Void)?
-  @_Concurrency.MainActor @preconcurrency public init(isEditing: Swift.Bool = true)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor @preconcurrency public func setWifiInfo(name: Swift.String, password: Swift.String = "", wifiIndex: Swift.UInt32?, isConnected: Swift.Bool = false)
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class PlaudAudioPlayerViewController : UIKit.UIViewController, AVFAudio.AVAudioPlayerDelegate {
-  @objc @_Concurrency.MainActor @preconcurrency public init(filePath: Swift.String)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency @objc public func audioPlayerDidFinishPlaying(_: AVFAudio.AVAudioPlayer, successfully flag: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency @objc public func audioPlayerDecodeErrorDidOccur(_: AVFAudio.AVAudioPlayer, error: (any Swift.Error)?)
-  @_Concurrency.MainActor @preconcurrency @objc public func audioPlayerBeginInterruption(_: AVFAudio.AVAudioPlayer)
-  @_Concurrency.MainActor @preconcurrency @objc public func audioPlayerEndInterruption(_: AVFAudio.AVAudioPlayer, withOptions _: Swift.Int)
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class PlaudFileUploader {
-  public static let shared: PlaudDeviceBasicSDK.PlaudFileUploader
-  public var device: PenBleSDK.BleDevice?
-  public func uploadRecording(sn: Swift.String, sessionId: Swift.Int, onProgress: @escaping (Swift.Double) -> Swift.Void, completion: @escaping (Swift.Result<[Swift.String : Any], any Swift.Error>) -> Swift.Void)
-  public func bindDevice(ownerId: Swift.String, sn: Swift.String, completion: @escaping (Swift.Result<[Swift.String : Any], any Swift.Error>) -> Swift.Void)
-  public func unbindDevice(ownerId: Swift.String, sn: Swift.String, completion: @escaping (Swift.Result<[Swift.String : Any], any Swift.Error>) -> Swift.Void)
-  @objc deinit
-}
-extension PlaudDeviceBasicSDK.PlaudDeviceAgent {
-  public func checkSdkResource()
-}
 extension PlaudDeviceBasicSDK.PlaudDeviceAgent {
   public func sendApiToken(token: Swift.String, callback: @escaping (Swift.Bool, Swift.String) -> Swift.Void)
   public func sendBinaryFile(type: Swift.Int, data: Foundation.Data?, callback: @escaping (Swift.Bool, Swift.String) -> Swift.Void)
   @objc dynamic public func onBinaryFileReq(type: Swift.Int, packageOffset: Swift.Int, packageSize: Swift.Int, endStatus: Swift.Int)
   @objc dynamic public func onBinaryFileEnd(result: Swift.Int)
 }
-extension PlaudDeviceBasicSDK.PlaudDeviceAgent {
-  public func checkDeviceState(state _: Swift.Int, privacy _: Swift.Int, keyState _: Swift.Int, uDisk _: Swift.Int, findMyToken _: Swift.Int, hasSndpKey _: Swift.Int, deviceAccessToken: Swift.Int)
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class TestAgent : ObjectiveC.NSObject {
+  @objc public static let shared: PlaudDeviceBasicSDK.TestAgent
+  @objc public func testFunc() -> Swift.String
+  @objc deinit
+}
+extension Swift.Array {
+  public mutating func appendDistinct<S>(contentsOf newElements: S, where condition: @escaping (Element, Element) -> Swift.Bool) where Element == S.Element, S : Swift.Sequence
 }
 @_hasMissingDesignatedInitializers public class PlaudLocalizationManager {
   public static let shared: PlaudDeviceBasicSDK.PlaudLocalizationManager
@@ -734,240 +795,6 @@ extension Swift.String {
   public var plaudLocalized: Swift.String {
     get
   }
-}
-@_inheritsConvenienceInitializers @objc public class PlaudBleDevice : PenBleSDK.BleDevice {
-  @objc override public init(sn: Swift.String)
-  override public init(peripheral: PenBleSDK.CBPeripheral, rssi: Foundation.NSNumber, manufacturerData: Foundation.Data, localName: Swift.String?)
-  @objc deinit
-}
-@objc public protocol PlaudDeviceAgentProtocol {
-  @objc func bleAppKeyState(result: Swift.Int)
-  @objc func blePenState(state: Swift.Int, privacy: Swift.Int, keyState: Swift.Int, uDisk: Swift.Int, findMyToken: Swift.Int, hasSndpKey: Swift.Int, deviceAccessToken: Swift.Int)
-  @objc optional func bleScanResult(bleDevices: [PenBleSDK.BleDevice])
-  @objc optional func bleScanOverTime()
-  @objc optional func bleConnectState(state: Swift.Int)
-  @objc optional func bleBind(sn: Swift.String?, status: Swift.Int, protVersion: Swift.Int, timezone: Swift.Int)
-  @objc optional func bleMicGain(_ value: Swift.Int)
-  @objc optional func bleStorage(total: Swift.Int, free: Swift.Int, duration: Swift.Int)
-  @objc optional func blePowerChange(power: Swift.Int, oldPower: Swift.Int)
-  @objc optional func bleChargingState(isCharging: Swift.Bool, level: Swift.Int)
-  @objc optional func bleFileList(bleFiles: [PenBleSDK.BleFile])
-  @objc optional func bleRecordStart(sessionId: Swift.Int, start: Swift.Int, status: Swift.Int, scene: Swift.Int, startTime: Swift.Int)
-  @objc optional func bleRecordStop(sessionId: Swift.Int, reason: Swift.Int, fileExist: Swift.Bool, fileSize: Swift.Int)
-  @objc optional func bleRecordPause(sessionId: Swift.Int, reason: Swift.Int, fileExist: Swift.Bool, fileSize: Swift.Int)
-  @objc optional func bleRecordResume(sessionId: Swift.Int, start: Swift.Int, status: Swift.Int, scene: Swift.Int, startTime: Swift.Int)
-  @objc optional func bleSyncFileHead(sessionId: Swift.Int, status: Swift.Int)
-  @objc optional func bleSyncFileTail(sessionId: Swift.Int, crc: Swift.Int)
-  @objc optional func bleData(sessionId: Swift.Int, start: Swift.Int, data: Foundation.Data)
-  @objc optional func blePcmData(sessionId: Swift.Int, millsec: Swift.Int, pcmData: Foundation.Data, isMusic: Swift.Bool)
-  @objc optional func bleDataComplete()
-  @objc optional func bleDecodeFail(start: Swift.Int)
-  @objc optional func bleSyncFileStop()
-  @objc optional func bleDownloadFile(sessionId: Swift.Int, outputPath: Swift.String, status: Swift.Int, progress: Swift.Int, tips: Swift.String)
-  @objc optional func bleDownloadFileStop()
-  @objc optional func bleDeleteFile(sessionId: Swift.Int, status: Swift.Int)
-  @objc optional func bleDepair(_ status: Swift.Int)
-  @objc optional func onWifiSyncConfigReceived(index: Swift.UInt32, ssid: Swift.String, password: Swift.String)
-  @objc optional func onWifiSyncConfigSet(result: Swift.Int)
-  @objc optional func onWifiSyncListReceived(list: [Swift.UInt32])
-  @objc optional func onWifiSyncDeleteResult(result: Swift.Int)
-  @objc optional func onWifiSyncTestStarted(index: Swift.UInt32)
-  @objc optional func onWifiSyncWillStart(seconds: Swift.Int)
-  @objc optional func onWifiSyncTestResult(index: Swift.UInt32, result: Swift.Int, rawCode: Swift.Int)
-  @objc optional func onWifiSyncUrl(url: Swift.String)
-  @objc optional func onSdkCheckPermissionResult(pass: Swift.Bool, tips: Swift.String)
-  @objc optional func onSdkCheckResourceResult(pass: Swift.Bool, tips: Swift.String)
-  @objc optional func onWifiSyncEnabled(_ value: Swift.Int)
-  @objc optional func onCommonMsgChannel(type: Swift.Int, value: Swift.Int, tips: Swift.String)
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class PlaudDeviceAgent : ObjectiveC.NSObject {
-  @objc public static let shared: PlaudDeviceBasicSDK.PlaudDeviceAgent
-  public var bleAgent: PenBleSDK.BleAgent?
-  @objc weak public var delegate: (any PlaudDeviceBasicSDK.PlaudDeviceAgentProtocol)? {
-    @objc get
-    @objc set
-  }
-  @objc public func initSDK(hostName: Swift.String, appKey: Swift.String, appSecret: Swift.String, bindToken: Swift.String, extra: [Swift.String : Swift.String] = [:])
-  @objc public static func getTestAppKey() -> Swift.String
-  @objc public static func getTestAppSecret() -> Swift.String
-  @objc public func depair(clear: Swift.Bool = false)
-  @objc public func setDeviceBinding(token: Swift.String)
-  @objc public func startScan()
-  @objc public func stopScan()
-  @objc public func connectBleDevice(bleDevice: PenBleSDK.BleDevice)
-  @objc public func disconnect()
-  @objc public func tryReconnectLastDevice()
-  @objc public func getState()
-  @objc public func getStorage()
-  @objc public func getWifiSyncEnable()
-  @objc public func setWifiSyncEnable(value: Swift.Int)
-  @objc public func setWifiSyncDomain(domain: Swift.String)
-  @objc public func getWifiSyncUrl()
-  @objc public func setWifiSyncTest(wifiIndex: Swift.UInt32)
-  @objc public func getWifiSyncTestResult(wifiIndex: Swift.UInt32)
-  @objc public func getChargingState()
-  @objc public func setMicGain(value: Swift.Int)
-  @objc public func readMicGain()
-  @objc public func setUDiskMode(onOff: Swift.Bool)
-  @objc public func checkIsRecording() -> Swift.Bool
-  @objc public func startRecord()
-  @objc public func stopRecord()
-  @objc public func getCurrentSessionID() -> Swift.Int
-  @objc public func pauseRecord()
-  @objc public func resumeRecord()
-  @objc public func getFileList(startSessionId: Swift.Int)
-  @objc public func getFile(sessionId: Swift.Int)
-  @objc public func syncFile(sessionId: Swift.Int, start: Swift.Int, end: Swift.Int)
-  @objc public func downloadFile(sessionId: Swift.Int, outputPath: Swift.String)
-  @objc public func stopDownloadFile()
-  @objc public func stopSyncFile()
-  @objc public func deleteFile(sessionId: Swift.Int)
-  @objc public func clearAllFiles()
-  @objc public func restoreFactory()
-  @objc public func getWifiSyncConfig(wifiIndex: Swift.UInt32)
-  @objc public func setWifiSyncConfig(operation: Swift.Int, wifiIndex: Swift.UInt32, ssid: Swift.String, password: Swift.String)
-  @objc public func getWifiSyncList()
-  @objc public func deleteWifiSyncConfig(wifiIndices: [Swift.UInt32])
-  @objc deinit
-}
-extension PlaudDeviceBasicSDK.PlaudDeviceAgent : PenBleSDK.BleAgentProtocol {
-  @objc dynamic public func bleScanResult(bleDevices: [PenBleSDK.BleDevice])
-  @objc dynamic public func bleScanOverTime()
-  @objc dynamic public func bleAppKeyState(result: Swift.Int)
-  @objc dynamic public func bleConnectState(state: Swift.Int)
-  @objc dynamic public func bleBind(sn: Swift.String?, status: Swift.Int, protVersion: Swift.Int, timezone: Swift.Int)
-  @objc dynamic public func blePenState(state: Swift.Int, privacy: Swift.Int, keyState: Swift.Int, uDisk: Swift.Int, findMyToken: Swift.Int, hasSndpKey: Swift.Int, deviceAccessToken: Swift.Int)
-  @objc dynamic public func bleStorage(total: Swift.Int, free: Swift.Int, duration: Swift.Int)
-  @objc dynamic public func blePowerChange(power: Swift.Int, oldPower: Swift.Int)
-  @objc dynamic public func bleChargingState(isCharging: Swift.Bool, level: Swift.Int)
-  @objc dynamic public func bleFileList(bleFiles: [PenBleSDK.BleFile])
-  @objc dynamic public func bleDataComplete()
-  @objc dynamic public func bleRecordStart(sessionId: Swift.Int, start: Swift.Int, status: Swift.Int, scene: Swift.Int, startTime: Swift.Int)
-  @objc dynamic public func bleRecordStop(sessionId: Swift.Int, reason: Swift.Int, fileExist: Swift.Bool, fileSize: Swift.Int)
-  @objc dynamic public func bleRecordPause(sessionId: Swift.Int, reason: Swift.Int, fileExist: Swift.Bool, fileSize: Swift.Int)
-  @objc dynamic public func bleRecordResume(sessionId: Swift.Int, start: Swift.Int, status: Swift.Int, scene: Swift.Int, startTime: Swift.Int)
-  @objc dynamic public func bleSyncFileHead(sessionId: Swift.Int, status: Swift.Int)
-  @objc dynamic public func bleSyncFileTail(sessionId: Swift.Int, crc: Swift.Int)
-  @objc dynamic public func bleData(sessionId: Swift.Int, start: Swift.Int, data: Foundation.Data)
-  @objc dynamic public func blePcmData(sessionId: Swift.Int, millsec: Swift.Int, pcmData: Foundation.Data, isMusic: Swift.Bool)
-  @objc dynamic public func bleDecodeFail(start: Swift.Int)
-  @objc dynamic public func bleSyncFileStop()
-  @objc dynamic public func bleDeleteFile(sessionId: Swift.Int, status: Swift.Int)
-  @objc dynamic public func bleDepair(_ status: Swift.Int)
-  @objc dynamic public func bleMicGain(_ value: Swift.Int)
-  @objc dynamic public func onSyncIdleWifiConfigReceived(index: Swift.UInt32, ssid: Swift.String, password: Swift.String)
-  @objc dynamic public func onSyncIdleWifiConfigSet(result: Swift.Int)
-  @objc dynamic public func onSyncIdleWifiListReceived(list: [Swift.UInt32])
-  @objc dynamic public func onSyncIdleWifiDeleteResult(result: Swift.Int)
-  @objc dynamic public func onSyncIdleWifiTestStarted(index: Swift.UInt32)
-  @objc dynamic public func onSyncIdleWillStart(seconds: Swift.Int)
-  @objc dynamic public func onSyncIdleWifiTestResult(index: Swift.UInt32, result: Swift.Int, rawCode: Swift.Int)
-  @objc dynamic public func bleSyncWhenIdleEnabled(_ value: Swift.Int)
-  @objc dynamic public func bleUDiskErr(funcName: Swift.String)
-  @objc dynamic public func bleUpdatePowerLowErr()
-  @objc dynamic public func bleDeviceDisconnectErr()
-  @objc dynamic public func bleState(powered: Swift.Bool)
-  @objc dynamic public func bleHandshakeWait(timeout: Swift.Int)
-  @objc dynamic public func bleDeviceName(name: Swift.String?)
-  @objc dynamic public func blePenTime(stamp: Swift.Int, timezone: Swift.Int, zoneMin: Swift.Int)
-  @objc dynamic public func blePasswordReset(password: Swift.Int)
-  @objc dynamic public func bleBacklightDuration(_ duration: Swift.Int)
-  @objc dynamic public func bleBacklightBright(_ bright: Swift.Int)
-  @objc dynamic public func bleLanguage(_ type: Swift.Int)
-  @objc dynamic public func bleRecScene(_ scene: Swift.Int)
-  @objc dynamic public func bleRecMode(_ mode: Swift.Int)
-  @objc dynamic public func bleVadSensitivity(_ value: Swift.Int)
-  @objc dynamic public func bleVpuGain(_ value: Swift.Int)
-  @objc dynamic public func bleSwitchHandler(_ id: Swift.Int)
-  @objc dynamic public func bleAutoPowerOff(_ value: Swift.Int)
-  @objc dynamic public func bleRawWaveEnabled(_ value: Swift.Int)
-  @objc dynamic public func bleRecordingAfterDisConnetEnabled(_ value: Swift.Int)
-  @objc dynamic public func bleFindMyState(_ value: Swift.Int)
-  @objc dynamic public func bleVPUCLKState(_ value: Swift.Int)
-  @objc dynamic public func bleStopRecordingAfterCharging(_ value: Swift.Int)
-  @objc dynamic public func bleAutoClear(_ open: Swift.Bool)
-  @objc dynamic public func bleVad(_ open: Swift.Bool)
-  @objc dynamic public func bleWiFiOpen(_ status: Swift.Int, _ wifiName: Swift.String, _ wholeName: Swift.String, _ wifiPass: Swift.String)
-  @objc dynamic public func bleWiFiClose(_ status: Swift.Int)
-  @objc dynamic public func bleSetWiFiSsid(status: Swift.Int)
-  @objc dynamic public func bleGetWiFiSsid(status: Swift.Int, ssid: Swift.String?)
-  @objc dynamic public func bleVoiceAbnormal(status: Swift.Int)
-  @objc dynamic public func bleWebsocketProfile(_ type: Swift.Int, _ conent: Swift.String?)
-  @objc dynamic public func bleWebsocketTest(_ status: Swift.Int)
-  @objc dynamic public func bleLedState(onOff: Swift.Int)
-  @objc dynamic public func bleSetLedState(onOff: Swift.Int)
-  @objc dynamic public func bleMarking(sessionId: Swift.Int, status: Swift.Int, markList: [Swift.UInt32])
-  @objc dynamic public func bleAngles(pitchAngle: Swift.Float, rollbackAngle: Swift.Float, yawAngle: Swift.Float)
-  @objc dynamic public func bleFotaResult(uid: Swift.Int, status: Swift.Int, errmsg: Swift.String?)
-  @objc dynamic public func bleFotaPackReq(uid: Swift.Int, start: Swift.Int, end: Swift.Int)
-  @objc dynamic public func bleFotaPackFin(uid: Swift.Int, status: Swift.Int, errmsg: Swift.String?)
-  @objc dynamic public func bleOtaDataSendFail()
-  @objc dynamic public func bleRate(lossRate: Swift.Double, rate: Swift.Int, instantRate: Swift.Int)
-  @objc dynamic public func blePrivacy(privacy: Swift.Int)
-  @objc dynamic public func bleClearAllFile(status: Swift.Int)
-  @objc dynamic public func bleAlarmRec(start: Swift.Int, duration: Swift.Int, repeatMode: Swift.Int)
-  @objc dynamic public func bleSetActive(status: Swift.Int)
-  @objc dynamic public func onResetFindmyResult(result: Swift.Int)
-  @objc dynamic public func onSetSoundPlusTokenResult(licenseKey: Swift.String)
-  @objc dynamic public func onGetSDFlashCIDResult(cid: Swift.String)
-}
-@_inheritsConvenienceInitializers @objc public class PlaudSDKLogger : ObjectiveC.NSObject {
-  @objc public static func logEvent(_ eventName: Swift.String, parameters: Foundation.NSDictionary? = nil)
-  @objc override dynamic public init()
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class TestAgent : ObjectiveC.NSObject {
-  @objc public static let shared: PlaudDeviceBasicSDK.TestAgent
-  @objc public func testFunc() -> Swift.String
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class PlaudDomainManager {
-  public enum Region : Swift.String, Swift.CaseIterable {
-    case cn
-    case us
-    public init?(rawValue: Swift.String)
-    public typealias AllCases = [PlaudDeviceBasicSDK.PlaudDomainManager.Region]
-    public typealias RawValue = Swift.String
-    nonisolated public static var allCases: [PlaudDeviceBasicSDK.PlaudDomainManager.Region] {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public static let shared: PlaudDeviceBasicSDK.PlaudDomainManager
-  @objc deinit
-  public func setAutoLanguageAssociation(_ enabled: Swift.Bool)
-  public func isAutoLanguageAssociationEnabled() -> Swift.Bool
-  public func setRegion(_ region: PlaudDeviceBasicSDK.PlaudDomainManager.Region)
-  public func setRegionForLanguage(_ languageCode: Swift.String)
-  public func getCurrentRegion() -> PlaudDeviceBasicSDK.PlaudDomainManager.Region
-  public func getCurrentDomain() -> Swift.String
-  public func getCurrentBaseURL() -> Swift.String
-  public func getDomain(for region: PlaudDeviceBasicSDK.PlaudDomainManager.Region) -> Swift.String
-  public func getBaseURL(for region: PlaudDeviceBasicSDK.PlaudDomainManager.Region) -> Swift.String
-  public func buildAPIURL(path: Swift.String) -> Swift.String
-  public func buildAPIURL(path: Swift.String, for region: PlaudDeviceBasicSDK.PlaudDomainManager.Region) -> Swift.String
-  public func buildAPIURL(path: Swift.String, for languageCode: Swift.String) -> Swift.String
-  public func getRegionForCurrentLanguage() -> PlaudDeviceBasicSDK.PlaudDomainManager.Region
-  public func getCurrentLanguageCode() -> Swift.String
-}
-extension PlaudDeviceBasicSDK.PlaudDeviceAgent {
-  public func clearSDKCredentials()
-}
-public enum Model : Swift.String {
-  case simulator, iPod1, iPod2, iPod3, iPod4, iPod5, iPod6, iPod7, iPad2, iPad3, iPad4, iPadAir, iPadAir2, iPadAir3, iPadAir4, iPadAir5, iPad5, iPad6, iPad7, iPad8, iPad9, iPadMini, iPadMini2, iPadMini3, iPadMini4, iPadMini5, iPadMini6, iPadPro9_7, iPadPro10_5, iPadPro11, iPadPro2_11, iPadPro3_11, iPadPro12_9, iPadPro2_12_9, iPadPro3_12_9, iPadPro4_12_9, iPadPro5_12_9, iPhone4, iPhone4S, iPhone5, iPhone5S, iPhone5C, iPhone6, iPhone6Plus, iPhone6S, iPhone6SPlus, iPhoneSE, iPhone7, iPhone7Plus, iPhone8, iPhone8Plus, iPhoneX, iPhoneXS, iPhoneXSMax, iPhoneXR, iPhone11, iPhone11Pro, iPhone11ProMax, iPhoneSE2, iPhone12Mini, iPhone12, iPhone12Pro, iPhone12ProMax, iPhone13Mini, iPhone13, iPhone13Pro, iPhone13ProMax, iPhoneSE3, iPhone14, iPhone14Plus, iPhone14Pro, iPhone14ProMax, AppleWatch1, AppleWatchS1, AppleWatchS2, AppleWatchS3, AppleWatchS4, AppleWatchS5, AppleWatchSE, AppleWatchS6, AppleWatchS7, AppleTV1, AppleTV2, AppleTV3, AppleTV4, AppleTV_4K, AppleTV2_4K, unrecognized
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-extension UIKit.UIDevice {
-  @_Concurrency.MainActor @preconcurrency public var type: PlaudDeviceBasicSDK.Model {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency public static func getOSInfo() -> Swift.String
 }
 @_hasMissingDesignatedInitializers public class PlaudWorkflowManagerTest {
   public static func runCompleteWorkflowTest()
@@ -994,35 +821,8 @@ extension UIKit.UIDevice {
   public static func batchProcessingExample()
   @objc deinit
 }
-public struct PlaudWifiInfo {
-  public init(name: Swift.String, password: Swift.String, isConnected: Swift.Bool, index: Swift.UInt32 = 0)
-}
-@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency public class PlaudWifiSettingPage : UIKit.UIViewController, PlaudDeviceBasicSDK.PlaudDeviceAgentProtocol {
-  @_Concurrency.MainActor @preconcurrency public static func resetTempTestWifiIndex()
-  @_Concurrency.MainActor @preconcurrency @objc public func bleAppKeyState(result _: Swift.Int)
-  @_Concurrency.MainActor @preconcurrency @objc public func onWifiSyncUrl(url: Swift.String)
-  @_Concurrency.MainActor @preconcurrency @objc public func blePenState(state _: Swift.Int, privacy _: Swift.Int, keyState _: Swift.Int, uDisk _: Swift.Int, findMyToken _: Swift.Int, hasSndpKey _: Swift.Int, deviceAccessToken _: Swift.Int)
-  @_Concurrency.MainActor @preconcurrency @objc public func bleConnectState(state: Swift.Int)
-  @_Concurrency.MainActor @preconcurrency @objc public func onWifiSyncEnabled(_ value: Swift.Int)
-  @_Concurrency.MainActor @preconcurrency @objc public func onWifiSyncListReceived(list: [Swift.UInt32])
-  @_Concurrency.MainActor @preconcurrency @objc public func onWifiSyncConfigReceived(index: Swift.UInt32, ssid: Swift.String, password: Swift.String)
-  @_Concurrency.MainActor @preconcurrency @objc public func onWifiSyncConfigSet(result: Swift.Int)
-  @_Concurrency.MainActor @preconcurrency @objc public func onWifiSyncDeleteResult(result _: Swift.Int)
-  @_Concurrency.MainActor @preconcurrency @objc public func onWifiSyncTestResult(index: Swift.UInt32, result: Swift.Int, rawCode _: Swift.Int)
-  @_Concurrency.MainActor @preconcurrency public func getWifiTestTips(result: Swift.Int) -> Swift.String
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change _: [Foundation.NSKeyValueChangeKey : Any]?, context _: Swift.UnsafeMutableRawPointer?)
-  @objc deinit
-  @_Concurrency.MainActor @preconcurrency public func updateWifiListVisibility()
-  @_Concurrency.MainActor @preconcurrency public static func testWifiConnection(ssid: Swift.String, password: Swift.String, wifiIndex: Swift.UInt32?, edit: Swift.Bool, completion: @escaping (Swift.Bool, Swift.String) -> Swift.Void)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-}
-extension PlaudDeviceBasicSDK.PlaudWifiSettingPage : UIKit.UITableViewDataSource, UIKit.UITableViewDelegate {
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_: UIKit.UITableView, numberOfRowsInSection _: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_: UIKit.UITableView, heightForRowAt _: Foundation.IndexPath) -> CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
-  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+extension PlaudDeviceBasicSDK.PlaudDeviceAgent {
+  public func checkDeviceState(state _: Swift.Int, privacy _: Swift.Int, keyState _: Swift.Int, uDisk _: Swift.Int, findMyToken _: Swift.Int, hasSndpKey _: Swift.Int, deviceAccessToken: Swift.Int)
 }
 extension UIKit.UIViewController {
   @_Concurrency.MainActor @preconcurrency public var isCurrentVisible: Swift.Bool {
@@ -1036,26 +836,226 @@ extension UIKit.UIViewController {
 extension UIKit.UINavigationController {
   @_Concurrency.MainActor @preconcurrency public func pushViewController(_ viewController: UIKit.UIViewController, animated: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
 }
+@_inheritsConvenienceInitializers @objc public class PlaudSDKLogger : ObjectiveC.NSObject {
+  @objc public static func logEvent(_ eventName: Swift.String, parameters: Foundation.NSDictionary? = nil)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct WorkflowResultResponse : Swift.Codable {
+  public let id: Swift.String
+  public let status: Swift.String
+  public let ownerId: Swift.String?
+  public let metadataJson: [Swift.String : PlaudDeviceBasicSDK.AnyCodable]?
+  public let fileId: Swift.String?
+  public let tasks: [PlaudDeviceBasicSDK.WorkflowTaskResult]
+  public let metadata: [Swift.String : PlaudDeviceBasicSDK.AnyCodable]?
+  public let results: [Swift.String : PlaudDeviceBasicSDK.AnyCodable]?
+  public let taskResults: [Swift.String : PlaudDeviceBasicSDK.AnyCodable]?
+  public let completedAt: Swift.String?
+  public let duration: Swift.Double?
+  public let message: Swift.String?
+  public let progress: Swift.Double?
+  public let estimatedCompletionTime: Swift.String?
+  public let taskStatuses: [Swift.String : Swift.String]?
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var legacyResults: [Swift.String : Any]? {
+    get
+  }
+  public var legacyTaskResults: [Swift.String : Any]? {
+    get
+  }
+  public var legacyCompletedAt: Swift.String? {
+    get
+  }
+  public var legacyDuration: Foundation.TimeInterval? {
+    get
+  }
+  public var legacyProgress: Swift.Double? {
+    get
+  }
+  public var legacyMessage: Swift.String? {
+    get
+  }
+  public var legacyEstimatedCompletionTime: Swift.String? {
+    get
+  }
+  public var legacyTaskStatuses: [Swift.String : Swift.String]? {
+    get
+  }
+  public var firstTranscriptResult: PlaudDeviceBasicSDK.TranscriptResult? {
+    get
+  }
+  public var firstAIEtlResult: PlaudDeviceBasicSDK.AIEtlResult? {
+    get
+  }
+  public var firstAISummaryResult: PlaudDeviceBasicSDK.AISummaryResult? {
+    get
+  }
+  public var allTranscriptText: Swift.String {
+    get
+  }
+  public var transcriptBySpeaker: [Swift.String : Swift.String] {
+    get
+  }
+  public var transcriptTask: PlaudDeviceBasicSDK.WorkflowTaskResult? {
+    get
+  }
+  public var aiEtlTask: PlaudDeviceBasicSDK.WorkflowTaskResult? {
+    get
+  }
+  public var aiSummaryTask: PlaudDeviceBasicSDK.WorkflowTaskResult? {
+    get
+  }
+  public var transcriptDuration: Swift.Int64? {
+    get
+  }
+  public var aiEtlDuration: Swift.Int64? {
+    get
+  }
+  public var aiSummaryDurationSeconds: Swift.Double? {
+    get
+  }
+  public var transcriptDurationSeconds: Swift.Double? {
+    get
+  }
+  public var aiEtlDurationSeconds: Swift.Double? {
+    get
+  }
+  public var isSuccess: Swift.Bool {
+    get
+  }
+  public var segmentCount: Swift.Int {
+    get
+  }
+  public var allSpeakers: [Swift.String] {
+    get
+  }
+  public var speakers: [Swift.String] {
+    get
+  }
+  public var transcriptTotalDuration: Foundation.TimeInterval {
+    get
+  }
+  public var aiEtlSummary: Swift.String? {
+    get
+  }
+  public var aiSummaryText: Swift.String? {
+    get
+  }
+  public var aiSummaryKeyPoints: [Swift.String]? {
+    get
+  }
+  public var aiSummaryActionItems: [Swift.String]? {
+    get
+  }
+  public var aiSummaryParticipants: [Swift.String]? {
+    get
+  }
+  public var aiSummaryTemplate: Swift.String? {
+    get
+  }
+  public var aiSummaryModel: Swift.String? {
+    get
+  }
+  public var aiSummaryDuration: Swift.String? {
+    get
+  }
+  public var aiSummaryHeadline: Swift.String? {
+    get
+  }
+  public var aiSummaryTopics: [PlaudDeviceBasicSDK.AISummaryTopic]? {
+    get
+  }
+  public var clinicalReport: Swift.String? {
+    get
+  }
+  public var dealStatus: Swift.String? {
+    get
+  }
+  public var dealIntentionRating: Swift.String? {
+    get
+  }
+  public var communicationHighlight: Swift.String? {
+    get
+  }
+  public var communicationSuggestion: Swift.String? {
+    get
+  }
+  public var customerAppellation: Swift.String? {
+    get
+  }
+  public var hasAIEtlTask: Swift.Bool {
+    get
+  }
+  public var hasAISummaryTask: Swift.Bool {
+    get
+  }
+  public var hasTranscriptTask: Swift.Bool {
+    get
+  }
+  public var taskTypes: [Swift.String] {
+    get
+  }
+  public var embeddingsData: [Swift.String : [Swift.Double]]? {
+    get
+  }
+  public var hasEmbeddings: Swift.Bool {
+    get
+  }
+  public var transcriptStatusCode: Swift.Int? {
+    get
+  }
+}
+public struct WorkflowTaskResult : Swift.Codable {
+  public let taskId: Swift.String
+  public let taskType: Swift.String
+  public let status: Swift.String
+  public let startTime: Swift.Int64?
+  public let endTime: Swift.Int64?
+  public let result: PlaudDeviceBasicSDK.AnyCodable?
+  public init(taskId: Swift.String, taskType: Swift.String, status: Swift.String, startTime: Swift.Int64?, endTime: Swift.Int64?, result: PlaudDeviceBasicSDK.AnyCodable?)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func debugPrintTaskResult()
+  public var transcriptResult: PlaudDeviceBasicSDK.TranscriptResult? {
+    get
+  }
+  public var aiEtlResult: PlaudDeviceBasicSDK.AIEtlResult? {
+    get
+  }
+  public var aiSummaryResult: PlaudDeviceBasicSDK.AISummaryResult? {
+    get
+  }
+}
+public enum WorkflowParsingError : Swift.Error, Foundation.LocalizedError {
+  case missingRequiredField(Swift.String)
+  case invalidDataStructure(Swift.String)
+  case unsupportedFormat(Swift.String)
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
 public struct AnyCodable : Swift.Codable {
   public let value: Any
   public init(_ value: Any)
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
-extension UIKit.UIColor {
-  convenience public init(hex: Swift.UInt32)
+extension PlaudDeviceBasicSDK.PlaudDeviceAgent {
+  public func clearSDKCredentials()
 }
+extension PlaudDeviceBasicSDK.PlaudDomainManager.Region : Swift.Equatable {}
+extension PlaudDeviceBasicSDK.PlaudDomainManager.Region : Swift.Hashable {}
+extension PlaudDeviceBasicSDK.PlaudDomainManager.Region : Swift.RawRepresentable {}
 extension PlaudDeviceBasicSDK.SoundCategory : Swift.Equatable {}
 extension PlaudDeviceBasicSDK.SoundCategory : Swift.Hashable {}
+extension PlaudDeviceBasicSDK.Model : Swift.Equatable {}
+extension PlaudDeviceBasicSDK.Model : Swift.Hashable {}
+extension PlaudDeviceBasicSDK.Model : Swift.RawRepresentable {}
 extension PlaudDeviceBasicSDK.WorkflowStatus : Swift.Equatable {}
 extension PlaudDeviceBasicSDK.WorkflowStatus : Swift.Hashable {}
 extension PlaudDeviceBasicSDK.WorkflowStatus : Swift.RawRepresentable {}
 extension PlaudDeviceBasicSDK.WorkflowTaskType : Swift.Equatable {}
 extension PlaudDeviceBasicSDK.WorkflowTaskType : Swift.Hashable {}
 extension PlaudDeviceBasicSDK.WorkflowTaskType : Swift.RawRepresentable {}
-extension PlaudDeviceBasicSDK.PlaudDomainManager.Region : Swift.Equatable {}
-extension PlaudDeviceBasicSDK.PlaudDomainManager.Region : Swift.Hashable {}
-extension PlaudDeviceBasicSDK.PlaudDomainManager.Region : Swift.RawRepresentable {}
-extension PlaudDeviceBasicSDK.Model : Swift.Equatable {}
-extension PlaudDeviceBasicSDK.Model : Swift.Hashable {}
-extension PlaudDeviceBasicSDK.Model : Swift.RawRepresentable {}
